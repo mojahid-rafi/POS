@@ -1,0 +1,30 @@
+CREATE TABLE item_info(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    item_code VARCHAR(20) not null DEFAULT '',
+    catagory_id VARCHAR(20) not null DEFAULT '',
+    unit VARCHAR(30) not null DEFAULT '',
+    unit_price Float(10,2) not null DEFAULT 0,
+    last_pur_price float(10,2) not null DEFAULT 0,
+    barcode VARCHAR(20) not null DEFAULT '',
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    update_at datetime null
+    
+);
+
+
+#-----------------------------------------------------------------------
+
+CREATE TABLE party_info(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    party_name VARCHAR(30) not null DEFAULT '',
+    party_type VARCHAR(30) not null DEFAULT '',
+ 	address_ar VARCHAR(50) not null DEFAULT '',
+    phone VARCHAR(15) not null DEFAULT '',
+    contact_person VARCHAR(30) not null DEFAULT '',
+    cp_phone VARCHAR(15) not null DEFAULT '',
+    acct_head VARCHAR(30) not null DEFAULT '',
+    head_type VARCHAR(30) not null DEFAULT '',
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    updated_at datetime null
+    
+);

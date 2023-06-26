@@ -14,7 +14,63 @@ CREATE TABLE item_info(
 
 #-----------------------------------------------------------------------
 
-CREATE TABLE party_info(
+CREATE TABLE customer(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    party_name VARCHAR(30) not null DEFAULT '',
+    party_type VARCHAR(30) not null DEFAULT '',
+ 	address_ar VARCHAR(50) not null DEFAULT '',
+    phone VARCHAR(15) not null DEFAULT '',
+    contact_person VARCHAR(30) not null DEFAULT '',
+    cp_phone VARCHAR(15) not null DEFAULT '',
+    acct_head VARCHAR(30) not null DEFAULT '',
+    head_type VARCHAR(30) not null DEFAULT '',
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    updated_at datetime null
+    
+);
+
+#----------------------------------------------------------
+
+CREATE TABLE sale_mastr(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    inv_no INT NOT NULL DEFAULT 0,
+    p_id INT NOT NULL DEFAULT 0,
+    phone VARCHAR(15) not null DEFAULT '',
+    email VARCHAR(30) not null DEFAULT '',
+    type VARCHAR(30) not null DEFAULT '',
+    total FLOAT(10,2) not null DEFAULT 0,
+    discount FLOAT(10,2) not null DEFAULT 0,
+    payable FLOAT(10,2) not null DEFAULT 0,
+    paid FLOAT(10,2) not null DEFAULT 0,
+    refund FLOAT(10,2) not null DEFAULT 0,
+    due FLOAT(10,2) not null DEFAULT 0,
+    pay_mode FLOAT(10,2) not null DEFAULT 0,
+    sale_date DATETIME null,
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    update_at datetime
+);
+
+#-----------------------------------------------------------
+
+CREATE TABLE sale_details(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    inv_no INT not null DEFAULT 0,
+    an_mstr INT not null DEFAULT 0,
+    item_id INT not null DEFAULT 0,
+    sele_price FLOAT not null DEFAULT 0,
+    qty FLOAT not null DEFAULT 0,
+    discount FLOAT not null DEFAULT 0,
+    total_dis FLOAT not null DEFAULT 0,
+    vat FLOAT not null DEFAULT 0,
+    total FLOAT not null DEFAULT 0,
+    sale_date DATETIME null,
+    create_at timestamp default CURRENT_TIMESTAMP,
+    update_at DATETIME null
+);
+
+#-----------------------------------------------------------------
+
+CREATE TABLE supplier(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     party_name VARCHAR(30) not null DEFAULT '',
     party_type VARCHAR(30) not null DEFAULT '',

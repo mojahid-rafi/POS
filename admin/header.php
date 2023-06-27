@@ -89,29 +89,24 @@
                 </li>
                 <li>
                     <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
-                        <span class="nav-label">Donor Management</span><i class="fa fa-angle-left arrow"></i></a>
+                        <span class="nav-label">POS</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./add-blood-donor.php">Add New Donor</a>
+                            <a href="./customer.php">Add Customer</a>
                         </li>
                         <li>
-                            <a href="./add-blood-donation.php">Add Donation</a>
+                            <a href="./item_info.php">Item Information</a>
                         </li>
                         <li>
-                            <a href="./blood_donation.php">Blood Donation</a>
+                            <a href="./sale_details.php">Sale Details</a>
                         </li>
                         <li>
-                            <a href="./blood_request.php">Blood Request</a>
+                            <a href="./sale_master.php">Sale Master</a>
                         </li>
                         <li>
-                            <a href="./blood_club_info.php">Blood Club Info</a>
+                            <a href="./Supplier_form.php">Supplier Form</a>
                         </li>
-                        <li>
-                            <a href="./feedback.php">Feedback</a>
-                        </li>
-                        <li>
-                            <a href="./campaign_request.php">Campaign Request</a>
-                        </li>
+
                     </ul>
                 </li>
 

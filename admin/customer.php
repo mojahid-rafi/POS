@@ -157,6 +157,9 @@
                                 <td><?= $value['head_type']; ?></td>
                                 <td><?= $value['create_at']; ?></td>
                                 <td><?= $value['updated_at']; ?></td>
+                                <td> <a href="?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
+                                 <a href="?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
 

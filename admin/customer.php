@@ -23,8 +23,10 @@
                 $cpphone = $_POST['cpphone'];
 
                 
-                $insert = "INSERT INTO `customer`(`party_name`, `party_type`, `address_ar`, `phone`, `email`, `contact_person`, `cp_phone`) VALUES ('{$pname}','{$ptype}','{$phone}','{$email}','{$address}','{$conpersone}','{$cpphone}')";
+                $insert = "INSERT INTO customer (party_name, party_type, address_ar, phone, email, contact_person, cp_phone) VALUES ('{$pname}', '{$ptype}', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}')";
                 $con->query($insert);
+
+
             };
 
             
@@ -157,7 +159,12 @@
                                 <td><?= $value['head_type']; ?></td>
                                 <td><?= $value['create_at']; ?></td>
                                 <td><?= $value['updated_at']; ?></td>
-                                <td> <a href="?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
+                                <td> 
+                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
+
+                                    <!-- <a href="hello" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a> -->
+
+
                                  <a href="?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
                                 </td>
                             </tr>

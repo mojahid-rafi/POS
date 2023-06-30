@@ -160,12 +160,11 @@
                                 <td><?= $value['create_at']; ?></td>
                                 <td><?= $value['updated_at']; ?></td>
                                 <td> 
-                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
-
-                                    <!-- <a href="hello" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a> -->
+                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
 
 
-                                 <a href="?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+
+                                 <a href="delete_customer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

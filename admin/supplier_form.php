@@ -1,4 +1,22 @@
 <?php include ("./header.php"); ?>
+<?php require ("./src/database.php"); ?>
+
+<?php
+            if (isset($_POST['submit'])){
+                $pname = $_POST['pname'];
+                $ptype = $_POST['ptype'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                $conpersone = $_POST['conpersone'];
+                $cpphone = $_POST['cpphone'];
+
+                
+                $insert = "INSERT INTO supplier(party_name,party_type,address_ar,phone,email,contact_person,cp_phone) VALUES ('{$pname}','{$ptype}','{$address}','{$phone}','{$email}','{$conpersone}','{$cpphone}')";
+                $con->query($insert);
+
+};
+?>
 
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
@@ -45,12 +63,12 @@
 										  
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
-                                            <label>Customer Name : </label>
-                                            <input name="reqfrom" class="form-control" type="text" placeholder="Full Name">
+                                            <label>Party Name : </label>
+                                            <input name="pname" class="form-control" type="text" placeholder="Full Name">
                                         </div>
                                         <div class="col-sm-6 form-group">
                                             <label>Party Type : </label>
-                                            <input name="pname" class="form-control" type="text" placeholder="Party Type">
+                                            <input name="ptype" class="form-control" type="text" placeholder="Party Type">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -86,13 +104,18 @@
                                           </div>
                                           <div class="modal-footer">
 <!--                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                                              <button class="btn btn-default px-4" type="submit">Save</button>
+                                              <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
                                           </div>
                                       </div>
                                   </div>
                               </form>
+                              
                           </div>
         <!-- modal end -->
+        <?php 
+            $select = "SELECT * FROM supplier";
+            $query = con->query($select);
+        ?>
                     </div>        
                 </div>
             </div>

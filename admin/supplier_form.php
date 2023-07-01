@@ -112,10 +112,67 @@
                               
                           </div>
         <!-- modal end -->
+
         <?php 
-            $select = "SELECT * FROM supplier";
-            $query = con->query($select);
+            $select = 'SELECT * FROM supplier';
+            $query = $con->query($select);
+            $result = $query->fetch_all(MYSQLI_ASSOC);
         ?>
+
+
+
+        <div class="ibox-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+
+                                <tr>
+                                    <th width="50px">SL</th>
+                                    <th>Party Name</th>
+                                    <th>Party Type</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Contact Person</th>
+                                    <th>Contact Person Phone</th>
+                                    <th>Acct Head</th>
+                                    <th>Head Type</th>
+                                    <th>Create At</th>
+                                    <th>Update At</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php foreach($result as $value): ?>
+                            <tr>
+                                <td><?= $value['id']; ?></td>
+                                <td><?= $value['party_name']; ?></td>
+                                <td><?= $value['party_type']; ?></td>
+                                <td><?= $value['address_ar']; ?></td>
+                                <td><?= $value['phone']; ?></td>
+                                <td><?= $value['email']; ?></td>
+                                <td><?= $value['contact_person']; ?></td>
+                                <td><?= $value['cp_phone']; ?></td>
+                                <td><?= $value['acct_head']; ?></td>
+                                <td><?= $value['head_type']; ?></td>
+                                <td><?= $value['create_at']; ?></td>
+                                <td><?= $value['updated_at']; ?></td>
+                                <td> 
+                                    <a href="editsupplier.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
+
+
+
+                                 <a href="delete_supplier.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+
+            
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>        
                 </div>
             </div>

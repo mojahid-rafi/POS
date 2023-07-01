@@ -1,4 +1,5 @@
 <?php include ("./header.php"); ?>
+<?php require ("./src/database.php"); ?>
 
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
@@ -13,6 +14,28 @@
         </div>
 
         <!--    Enter Your Content Here-->
+        <?php
+            if (isset($_POST['submit'])){
+                $icode = $_POST['icode'];
+                $catid = $_POST['catid'];
+                $unit = $_POST['unit'];
+                $uprice = $_POST['uprice'];
+                $lpprice = $_POST['lpprice'];
+                $barcode = $_POST['barcode'];
+                
+
+                
+                $insert = "INSERT INTO `item_info`(`item_code`, `catagory_id`, `unit`, `unit_price`, `last_pur_price`, `barcode`) VALUES ('{$icode}', '{$catid}', '{$unit}', '{$uprice}', '{$lpprice}', '{$barcode}')";
+                $con->query($insert);
+
+
+            };
+
+            
+        ?>
+
+
+
         <div class="page-content fade-in-up">
             <div class="row">
                 <div class="col-md-12">
@@ -65,8 +88,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
-                                            <label>Last Pur Price :</label>
-                                            <input name="lpprice" class="form-control" type="text" placeholder="Last Pur Price">
+                                            <label>Last Per Price :</label>
+                                            <input name="lpprice" class="form-control" type="text" placeholder="Last Per Price">
                                         </div>
                                         <div class="col-sm-6 form-group">
                                             <label>Barcode :</label>
@@ -80,13 +103,68 @@
                                           </div>
                                           <div class="modal-footer">
 <!--                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                                              <button class="btn btn-default px-4" type="submit">Save</button>
+                                              <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
                                           </div>
                                       </div>
                                   </div>
                               </form>
                           </div>
         <!-- modal end -->
+        <?php 
+            $select = 'SELECT * FROM item_info';
+            $query = $con->query($select);
+            $result = $query->fetch_all(MYSQLI_ASSOC);
+        ?>
+
+
+
+
+                    <div class="ibox-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+
+                                <tr>
+                                    <th width="50px">SL</th>
+                                    <th>Item Code</th>
+                                    <th>Catagory Id</th>
+                                    <th>Unit</th>
+                                    <th>Unit Price</th>
+                                    <th>Last Per Price </th>
+                                    <th>Barcode</th>
+                                    <th>Create At</th>
+                                    <th>Update At</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php foreach($result as $value): ?>
+                            <tr>
+                                <td><?= $value['id']; ?></td>
+                                <td><?= $value['item_code']; ?></td>
+                                <td><?= $value['catagory_id']; ?></td>
+                                <td><?= $value['unit']; ?></td>
+                                <td><?= $value['unit_price']; ?></td>
+                                <td><?= $value['last_pur_price']; ?></td>
+                                <td><?= $value['barcode']; ?></td>
+                                <td><?= $value['create_at']; ?></td>
+                                <td><?= $value['update_at']; ?></td>
+                                <td> 
+                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
+
+
+
+                                 <a href="delete_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+
+            
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>        
                 </div>
             </div>

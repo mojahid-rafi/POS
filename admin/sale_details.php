@@ -1,4 +1,5 @@
 <?php include ("./header.php"); ?>
+<?php require ("./src/database.php"); ?>
 
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
@@ -13,6 +14,34 @@
         </div>
 
         <!--    Enter Your Content Here-->
+
+        <!-- FEW PROBLEM IN INSERT OPTION START -->
+
+
+        <?php
+            if (isset($_POST['submit'])){
+                 $saledate = $_POST['saledate'];
+                 $innumber = $_POST['innumber'];
+                 $itemid = $_POST['itemid'];
+                 $saleprice = $_POST['saleprice'];
+                 $quentity = $_POST['quentity'];
+                 $discount = $_POST['discount'];
+                 $totaldis = $_POST['totaldis'];
+                 $total = $_POST['total'];
+                 $vat = $_POST['vat'];
+
+                
+                $insert = "INSERT INTO `sale_details`(`inv_no`, `sale_mstr_id`, `item_id`, `sale_price`, `qty`, `discount`, `total_dis`, `vat`, `total`, `sale_date`) VALUES ('{$innumber}', `sale_mstr_id`, '{$itemid}', '{$saleprice}', '{$quentity}', '{$discount}', '{$totaldis}', '{$vat}', '{$total}', '{$saledate}')";
+                $con->query($insert);
+
+
+            };
+        ?>
+
+          <!-- FEW PROBLEM IN INSERT OPTION END -->
+
+
+
         <div class="page-content fade-in-up">
             <div class="row">
                 <div class="col-md-12">
@@ -76,11 +105,17 @@
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
                                             <label>Total Discount :</label>
-                                            <input name="Totaldis" class="form-control" type="text" placeholder="Total Discount">
+                                            <input name="totaldis" class="form-control" type="text" placeholder="Total Discount">
                                         </div>
                                         <div class="col-sm-6 form-group">
                                             <label>Vat :</label>
                                             <input name="vat" class="form-control" type="text" placeholder="Vat">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 form-group">
+                                            <label>Total :</label>
+                                            <input name="total" class="form-control" type="text" placeholder="Total ">
                                         </div>
                                     </div>
 
@@ -90,7 +125,7 @@
                                           </div>
                                           <div class="modal-footer">
 <!--                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                                              <button class="btn btn-default px-4" type="submit">Save</button>
+                                              <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
                                           </div>
                                       </div>
                                   </div>

@@ -208,7 +208,7 @@
                                 <td><?= $value['create_at']; ?></td>
                                 <td><?= $value['update_at']; ?></td>
                                 <td> 
-                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
+                                    <a href="edit_sale_master.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
 
 
 

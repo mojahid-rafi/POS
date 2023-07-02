@@ -1,4 +1,5 @@
 <?php include ("./header.php"); ?>
+<?php require ("./src/database.php"); ?>
 
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
@@ -13,6 +14,34 @@
         </div>
 
         <!--    Enter Your Content Here-->
+
+        <?php
+            if (isset($_POST['submit'])){
+                 $paymode = $_POST['saledate'];
+                 $innumber = $_POST['innumber'];
+                 $pid = $_POST['pid'];
+                 $phone = $_POST['phone'];
+                 $email = $_POST['email'];
+                 $ptype = $_POST['ptype'];
+                 $total = $_POST['total'];
+                 $discount = $_POST['discount'];
+                 $payable = $_POST['payable'];
+                 $paid = $_POST['paid'];
+                 $refund = $_POST['refund'];
+                 $due = $_POST['due'];
+                 $paymode = $_POST['paymode'];
+
+                
+                $insert = "INSERT INTO `sale_mastr`(`inv_no`, `p_id`, `phone`, `email`, `product_type`, `total`, `discount`, `payable`, `paid`, `refund`, `due`, `pay_mode`, `sale_date`) VALUES ('{$innumber}', '{$pid}', '{$phone}', '{$email}', '{$ptype}', '{$total}', '{$discount}', '{$payable}', '{$paid}', '{$refund}','{$due}', '{$paymode}', '{$paymode}')";
+                $con->query($insert);
+
+
+            };
+        ?>
+
+
+
+
         <div class="page-content fade-in-up">
             <div class="row">
                 <div class="col-md-12">
@@ -55,7 +84,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
-                                            <label>product  Id : </label>
+                                            <label>Product  Id : </label>
                                             <input name="pid" class="form-control" type="text" placeholder="product Id">
                                         </div>
                                         <div class="col-sm-6 form-group">
@@ -116,13 +145,87 @@
                                           </div>
                                           <div class="modal-footer">
 <!--                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                                              <button class="btn btn-default px-4" type="submit">Save</button>
+                                              <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
                                           </div>
                                       </div>
                                   </div>
                               </form>
                           </div>
         <!-- modal end -->
+
+        <?php 
+            $select = 'SELECT * FROM sale_mastr';
+            $query = $con->query($select);
+            $result = $query->fetch_all(MYSQLI_ASSOC);
+        ?>
+
+
+
+
+                    <div class="ibox-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+
+                                <tr>
+                                    <th width="50px">SL</th>
+                                    <th>Sale Date</th>
+                                    <th>Invoice Number </th>
+                                    <th>Product Id </th>
+                                    <th>Phone </th>
+                                    <th>Email </th>
+                                    <th>Product Type</th>
+                                    <th>Total</th>
+                                    <th>Discount </th>
+                                    <th>Payable </th>
+                                    <th>Paid </th>
+                                    <th>Refund </th>
+                                    <th>Due </th>
+                                    <th>Pay Mode </th>
+                                    <th>Create At</th>
+                                    <th>Update At</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php foreach($result as $value): ?>
+                            <tr>
+                                <td><?= $value['id']; ?></td>
+                                <td><?= $value['sale_date']; ?></td>
+                                <td><?= $value['inv_no']; ?></td>
+                                <td><?= $value['p_id']; ?></td>
+                                <td><?= $value['phone']; ?></td>
+                                <td><?= $value['email']; ?></td>
+                                <td><?= $value['product_type']; ?></td>
+                                <td><?= $value['total']; ?></td>
+                                <td><?= $value['discount']; ?></td>
+                                <td><?= $value['payable']; ?></td>
+                                <td><?= $value['paid']; ?></td>
+                                <td><?= $value['refund']; ?></td>
+                                <td><?= $value['due']; ?></td>
+                                <td><?= $value['pay_mode']; ?></td>
+                                <td><?= $value['sale_date']; ?></td>
+                                <td><?= $value['create_at']; ?></td>
+                                <td><?= $value['update_at']; ?></td>
+                                <td> 
+                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
+
+
+
+                                    <a href="delete_sale_master.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+
+            
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+
                     </div>        
                 </div>
             </div>

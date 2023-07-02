@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="col-sm-6 form-group">
                                             <label>Sale price : </label>
-                                            <input name="saleprice" class="form-control" type="email" placeholder="Sale Price">
+                                            <input name="saleprice" class="form-control" type="text" placeholder="Sale Price">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -132,6 +132,68 @@
                               </form>
                           </div>
         <!-- modal end -->
+
+        <?php 
+            $select = 'SELECT * FROM sale_details';
+            $query = $con->query($select);
+            $result = $query->fetch_all(MYSQLI_ASSOC);
+        ?>
+
+
+
+
+                    <div class="ibox-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+
+                                <tr>
+                                    <th width="50px">SL</th>
+                                    <th>Sale Date</th>
+                                    <th>Invoice Number </th>
+                                    <th>Item Id </th>
+                                    <th>Sale price </th>
+                                    <th>Quentity </th>
+                                    <th>Discount</th>
+                                    <th>Total Discount</th>
+                                    <th>Vat </th>
+                                    <th>Total </th>
+                                    <th>Create At</th>
+                                    <th>Update At</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php foreach($result as $value): ?>
+                            <tr>
+                                <td><?= $value['id']; ?></td>
+                                <td><?= $value['sale_date']; ?></td>
+                                <td><?= $value['inv_no']; ?></td>
+                                <td><?= $value['item_id']; ?></td>
+                                <td><?= $value['sale_price']; ?></td>
+                                <td><?= $value['qty']; ?></td>
+                                <td><?= $value['discount']; ?></td>
+                                <td><?= $value['total_dis']; ?></td>
+                                <td><?= $value['vat']; ?></td>
+                                <td><?= $value['total']; ?></td>
+                                <td><?= $value['create_at']; ?></td>
+                                <td><?= $value['update_at']; ?></td>
+                                <td> 
+                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
+
+
+
+                                    <a href="delete_sale_details.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+
+            
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>        
                 </div>
             </div>

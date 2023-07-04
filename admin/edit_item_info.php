@@ -20,7 +20,7 @@
 
 
             
-            $select = "SELECT * FROM sale_details WHERE id=$id";
+            $select = "SELECT * FROM item_info WHERE id=$id";
             $query = $con->query($select);
             while($fetch = mysqli_fetch_assoc($query)){
                 ?>
@@ -30,7 +30,7 @@
 
 
 
-        <form action="update_sale_details.php" method="POST">
+        <form action="update_item_info.php" method="POST">
         <input type="text" name="id" hidden value="<?php echo $fetch['id'];  ?>" >
                                   <div class="modal-dialog modal-lg" role="document">
                                       <div class="modal-content">
@@ -43,50 +43,35 @@
 										  
                                           <div class="row">
                                         <div class="col-sm-6 form-group">
-                                            <label>Sale Date : </label>
-                                            <input name="saledate" class="form-control" type="date" placeholder="Sale Date" value="<?php echo $fetch['sale_date']; ?>" >
+                                            <label>Item Code : </label>
+                                            <input name="icode" class="form-control" type="text" placeholder="Item Code" value="<?php echo $fetch['item_code']; ?>">
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <label>Invoice Number : </label>
-                                            <input name="innumber" class="form-control" type="text" placeholder="Invoice Number" value="<?php echo $fetch['inv_no']; ?>" >
+                                            <label>Catagory Id : </label>
+                                            <input name="catid" class="form-control" type="text" placeholder="Catagory Id" value="<?php echo $fetch['catagory_id']; ?>">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
-                                            <label>Item Id : </label>
-                                            <input name="itemid" class="form-control" type="text" placeholder="Item Id" value="<?php echo $fetch['item_id']; ?>"  >
+                                            <label>Unit : </label>
+                                            <input name="unit" class="form-control" type="text" placeholder="Unit" value="<?php echo $fetch['unit']; ?>">
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <label>Sale price : </label>
-                                            <input name="saleprice" class="form-control" type="text" placeholder="Sale Price" value="<?php echo $fetch['sale_price']; ?>" >
+                                            <label>Unit Price :</label>
+                                            <input name="uprice" class="form-control" type="text" placeholder="Unit Price" value="<?php echo $fetch['unit_price']; ?>">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
-                                            <label>Quentity :</label>
-                                            <input name="quentity" class="form-control" type="text" placeholder="Quentity" value="<?php echo $fetch['qty']; ?>" >
+                                            <label>Last Per Price :</label>
+                                            <input name="lpprice" class="form-control" type="text" placeholder="Last Per Price" value="<?php echo $fetch['last_pur_price']; ?>">
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <label>Discount :</label>
-                                            <input name="discount" class="form-control" type="text" placeholder="Discount" value="<?php echo $fetch['discount']; ?>" >
+                                            <label>Barcode :</label>
+                                            <input name="barcode" class="form-control" type="text" placeholder="Barcode" value="<?php echo $fetch['barcode']; ?>">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <label>Total Discount :</label>
-                                            <input name="totaldis" class="form-control" type="text" placeholder="Total Discount" value="<?php echo $fetch['total_dis']; ?>" >
-                                        </div>
-                                        <div class="col-sm-6 form-group">
-                                            <label>Vat :</label>
-                                            <input name="vat" class="form-control" type="text" placeholder="Vat" value="<?php echo $fetch['vat']; ?>" >
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 form-group">
-                                            <label>Total :</label>
-                                            <input name="total" class="form-control" type="text" placeholder="Total " value="<?php echo $fetch['total']; ?>" >
-                                        </div>
-                                    </div>
+
 
 											<!--form body end -->
 											
@@ -106,7 +91,6 @@
 }
 
 ?>
-
 
 
 <?php include ("./footer.php"); ?>

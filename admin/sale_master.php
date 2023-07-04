@@ -17,7 +17,7 @@
 
         <?php
             if (isset($_POST['submit'])){
-                 $paymode = $_POST['saledate'];
+                 $saledate = $_POST['saledate'];
                  $innumber = $_POST['innumber'];
                  $pid = $_POST['pid'];
                  $phone = $_POST['phone'];
@@ -32,7 +32,7 @@
                  $paymode = $_POST['paymode'];
 
                 
-                $insert = "INSERT INTO `sale_mastr`(`inv_no`, `p_id`, `phone`, `email`, `product_type`, `total`, `discount`, `payable`, `paid`, `refund`, `due`, `pay_mode`, `sale_date`) VALUES ('{$innumber}', '{$pid}', '{$phone}', '{$email}', '{$ptype}', '{$total}', '{$discount}', '{$payable}', '{$paid}', '{$refund}','{$due}', '{$paymode}', '{$paymode}')";
+                $insert = "INSERT INTO `sale_mastr`(`inv_no`, `p_id`, `phone`, `email`, `product_type`, `total`, `discount`, `payable`, `paid`, `refund`, `due`, `pay_mode`, `sale_date`) VALUES ('{$innumber}', '{$pid}', '{$phone}', '{$email}', '{$ptype}', '{$total}', '{$discount}', '{$payable}', '{$paid}', '{$refund}','{$due}', '{$paymode}', '{$saledate}')";
                 $con->query($insert);
 
 

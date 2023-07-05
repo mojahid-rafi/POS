@@ -116,6 +116,7 @@ create TABLE roles(
 CREATE TABLE categories(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     cat_name VARCHAR(50) not null DEFAULT '',
+    discription VARCHAR(250) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     update_at datetime null
     

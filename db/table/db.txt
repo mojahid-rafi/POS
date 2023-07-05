@@ -85,3 +85,47 @@ CREATE TABLE supplier(
     updated_at datetime null
     
 );
+
+#-------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE users(
+	id INT AUTO_INCREMENT PRIMARY KEY ,
+    user_name VARCHAR(50) not null DEFAULT '',
+    display_name VARCHAR(50) not null DEFAULT '',
+    email VARCHAR(30) not null DEFAULT '',
+    role VARCHAR(30) not null DEFAULT '',
+    sts VARCHAR(50) not null DEFAULT '',
+    user_password VARCHAR(50) not null DEFAULT '',
+    user_con_password VARCHAR(50) not null DEFAULT '',
+    crete_at timestamp default CURRENT_TIMESTAMP,
+    update_at datetime null
+);
+
+#-----------------------------------------------------------------------------------------------------------------
+
+create TABLE roles(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    role_name VARCHAR(30) not null DEFAULT '',
+    sts VARCHAR(50) not null DEFAULT '',
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    update_at datetime null
+);
+
+#-----------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE categories(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    cat_name VARCHAR(50) not null DEFAULT '',
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    update_at datetime null
+    
+); 
+
+#------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE brands(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    brand_name VARCHAR(30) not null DEFAULT '',
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    update_at DATETIME null
+);

@@ -4,7 +4,7 @@
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
-            <h1 class="page-title">Customer</h1>
+            <h1 class="page-title">Customers</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="dashboard.php"><i class="la la-home font-20"></i></a>
@@ -131,16 +131,11 @@
                                 <tr>
                                     <th width="50px">SL</th>
                                     <th>Party Name</th>
-                                    <th>Party Type</th>
                                     <th>Address</th>
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Contact Person</th>
                                     <th>Contact Person Phone</th>
-                                    <th>Acct Head</th>
-                                    <th>Head Type</th>
-                                    <th>Create At</th>
-                                    <th>Update At</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -149,18 +144,13 @@
                             <tr>
                                 <td><?= $value['id']; ?></td>
                                 <td><?= $value['party_name']; ?></td>
-                                <td><?= $value['party_type']; ?></td>
                                 <td><?= $value['address_ar']; ?></td>
                                 <td><?= $value['phone']; ?></td>
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['contact_person']; ?></td>
                                 <td><?= $value['cp_phone']; ?></td>
-                                <td><?= $value['acct_head']; ?></td>
-                                <td><?= $value['head_type']; ?></td>
-                                <td><?= $value['create_at']; ?></td>
-                                <td><?= $value['updated_at']; ?></td>
                                 <td> 
-                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a><br><br>
+                                    <a href="editcustomer.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
 
 
 

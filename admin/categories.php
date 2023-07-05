@@ -111,7 +111,7 @@
                                 <td><?= $value['discription']; ?></td>
 
                                 <td> 
-                                    <a href="edit_catagories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
+                                    <a href="edit_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
 
                                  <a href="delete_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
                                 </td>

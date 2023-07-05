@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41ec23f3-8a76-4489-9034-c87a5db04aa6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/main.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/item_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/item_info.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,14 +31,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/item_info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="154" column="12" lean-forward="true" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="12" />
+            <state relative-caret-position="270">
+              <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
               <folding>
                 <element signature="e#3618#3638#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/assets/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="3379" column="26" selection-start-line="3379" selection-start-column="23" selection-end-line="3379" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/assets/css/main.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="11993" selection-start-line="4" selection-start-column="11993" selection-end-line="4" selection-end-column="11993" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -61,16 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/dashboard.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="202">
+              <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -82,15 +109,6 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="92" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="17" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -110,8 +128,13 @@
       <find>cashload.pk</find>
       <find>Pieces</find>
       <find>demo</find>
-      <find>fas fa-times</find>
       <find>Single select</find>
+      <find>page-sidebar</find>
+      <find>fas fa-times</find>
+      <find>.side-menu&gt;li a:hover</find>
+      <find>.side-menu &gt; li a:hover</find>
+      <find>.page-sidebar</find>
+      <find>.side-menu li a.active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,12 +146,15 @@
         <option value="$PROJECT_DIR$/admin/pos.php" />
         <option value="$PROJECT_DIR$/admin/pos/pos_style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/admin/header.php" />
         <option value="$PROJECT_DIR$/admin/pos/vendor.css" />
         <option value="$PROJECT_DIR$/admin/pos/app.css" />
         <option value="$PROJECT_DIR$/admin/pos/pos.php" />
         <option value="$PROJECT_DIR$/admin/assets/js/scripts/form-plugins.js" />
         <option value="$PROJECT_DIR$/admin/item_info.php" />
+        <option value="$PROJECT_DIR$/admin/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/admin/assets/css/main.min.css" />
+        <option value="$PROJECT_DIR$/admin/header.php" />
+        <option value="$PROJECT_DIR$/admin/footer.php" />
       </list>
     </option>
   </component>
@@ -174,15 +200,14 @@
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="main.css" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="POS" type="b2602c69:ProjectViewProjectNode" />
               <item name="POS" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="main.css" type="620a8d5e:NestingTreeNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="POS" type="b2602c69:ProjectViewProjectNode" />
@@ -239,18 +264,18 @@
       <workItem from="1688343938078" duration="597000" />
       <workItem from="1688451699460" duration="135000" />
       <workItem from="1688491750173" duration="2444000" />
-      <workItem from="1688572951945" duration="11565000" />
+      <workItem from="1688572951945" duration="14883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15888000" />
+    <option name="totallyTimeSpent" value="19206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19261745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19261745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -328,26 +353,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="92" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="17" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/assets/vendors/select2/dist/js/select2.full.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
         </state>
       </provider>
     </entry>
@@ -387,13 +398,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="106" column="65" selection-start-line="106" selection-start-column="65" selection-end-line="106" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/item_info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="154" column="12" lean-forward="true" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="12" />
+        <state relative-caret-position="270">
+          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
           <folding>
             <element signature="e#3618#3638#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="3379" column="26" selection-start-line="3379" selection-start-column="23" selection-end-line="3379" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11993" selection-start-line="4" selection-start-column="11993" selection-end-line="4" selection-end-column="11993" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
         </state>
       </provider>
     </entry>

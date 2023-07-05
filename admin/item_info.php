@@ -30,8 +30,6 @@
 
 
             };
-
-            
         ?>
 
 
@@ -131,28 +129,32 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    <?php foreach($result as $value): ?>
-                                        <tr>
-                                            <td><?= $value['id']; ?></td>
-                                            <td><?= $value['item_code']; ?></td>
-                                            <td><?= $value['catagory_id']; ?></td>
-                                            <td><?= $value['unit']; ?></td>
-                                            <td><?= $value['unit_price']; ?></td>
-                                            <td><?= $value['last_pur_price']; ?></td>
-                                            <td><?= $value['barcode']; ?></td>
-                                            <td><?= $value['create_at']; ?></td>
-                                            <td><?= $value['update_at']; ?></td>
-                                            <td>
-                                                <a href="edit_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5">
-                                                    <i class="fa fa-pencil font-14"></i>
-                                                </a>
-                                                <a href="delete_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5">
-                                                    <i class="fa fa-trash font-14"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
+                                        <?php
+                                            $select = 'SELECT * FROM item_info';
+                                            $query = $con->query($select);
+                                            $result = $query->fetch_all(MYSQLI_ASSOC);
+                                        ?>
+                                        <?php foreach($result as $value): ?>
+                                            <tr>
+                                                <td><?= $value['id']; ?></td>
+                                                <td><?= $value['item_code']; ?></td>
+                                                <td><?= $value['category_id']; ?></td>
+                                                <td><?= $value['unit']; ?></td>
+                                                <td><?= $value['unit_price']; ?></td>
+                                                <td><?= $value['last_pur_price']; ?></td>
+                                                <td><?= $value['barcode']; ?></td>
+                                                <td><?= $value['create_at']; ?></td>
+                                                <td><?= $value['update_at']; ?></td>
+                                                <td>
+                                                    <a href="edit_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5">
+                                                        <i class="fa fa-pencil font-14"></i>
+                                                    </a>
+                                                    <a href="delete_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5">
+                                                        <i class="fa fa-trash font-14"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

@@ -22,3 +22,7 @@
 
   header("location:http://localhost/R55/POS/admin/customer.php ");
 ?>
+
+
+
+

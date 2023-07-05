@@ -95,10 +95,10 @@
                             <a href="./item_info.php">Add Product</a>
                         </li>
                         <li>
-                            <a href="./sale_details.php">Categories</a>
+                            <a href="./categories.php">Categories</a>
                         </li>
                         <li>
-                            <a href="./sale_master.php">Brands</a>
+                            <a href="./brand.php">Brands</a>
                         </li>
 
                     </ul>

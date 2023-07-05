@@ -5,12 +5,12 @@
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
             <h1 class="page-title">Item Info</h1>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>
-                </li>
-               <!-- <li class="breadcrumb-item"></li>-->
-            </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="dashboard.php"><i class="la la-home font-20"></i></a>
+                    </li>
+                <!-- <li class="breadcrumb-item"></li>-->
+                </ol>
         </div>
 
         <!--    Enter Your Content Here-->
@@ -102,7 +102,7 @@
 											
                                           </div>
                                           <div class="modal-footer">
-<!--                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
                                               <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
                                           </div>
                                       </div>
@@ -115,10 +115,6 @@
             $query = $con->query($select);
             $result = $query->fetch_all(MYSQLI_ASSOC);
         ?>
-
-
-
-
                     <div class="ibox-body">
                         <div class="table-responsive">
                             <table class="table">
@@ -137,34 +133,33 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
-                                <?php foreach($result as $value): ?>
-                            <tr>
-                                <td><?= $value['id']; ?></td>
-                                <td><?= $value['item_code']; ?></td>
-                                <td><?= $value['catagory_id']; ?></td>
-                                <td><?= $value['unit']; ?></td>
-                                <td><?= $value['unit_price']; ?></td>
-                                <td><?= $value['last_pur_price']; ?></td>
-                                <td><?= $value['barcode']; ?></td>
-                                <td><?= $value['create_at']; ?></td>
-                                <td><?= $value['update_at']; ?></td>
-                                <td> 
-                                    <a href="edit_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
-
-
-
-                                 <a href="delete_item_info.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-
-            
+                                    <?php foreach($result as $value): ?>
+                                        <tr>
+                                            <td><?= $value['id']; ?></td>
+                                            <td><?= $value['item_code']; ?></td>
+                                            <td><?= $value['catagory_id']; ?></td>
+                                            <td><?= $value['unit']; ?></td>
+                                            <td><?= $value['unit_price']; ?></td>
+                                            <td><?= $value['last_pur_price']; ?></td>
+                                            <td><?= $value['barcode']; ?></td>
+                                            <td><?= $value['create_at']; ?></td>
+                                            <td><?= $value['update_at']; ?></td>
+                                            <td> 
+                                                <a href="edit_item_info.php?id=<?= $value['id']; ?>" 
+                                                class="btn btn-default btn-xs m-r-5">
+                                                    <i class="fa fa-pencil font-14"></i>
+                                                </a>
+                                                
+                                                <a href="delete_item_info.php?id=<?= $value['id']; ?>" 
+                                                class="btn btn-default btn-xs m-r-5">
+                                                    <i class="fa fa-trash font-14"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
-
-
                     </div>        
                 </div>
             </div>

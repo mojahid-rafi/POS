@@ -147,7 +147,7 @@
                         <span class="nav-label">User Management</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./customer.php">Users</a>
+                            <a href="./users.php">Users</a>
                         </li>
                         <li>
                             <a href="./Supplier_form.php">Roles</a>

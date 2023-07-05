@@ -94,6 +94,7 @@ CREATE TABLE users(
     display_name VARCHAR(50) not null DEFAULT '',
     email VARCHAR(30) not null DEFAULT '',
     role VARCHAR(30) not null DEFAULT '',
+    role_id VARCHAR(10) not null DEFAULT '',
     sts VARCHAR(50) not null DEFAULT '',
     user_password VARCHAR(50) not null DEFAULT '',
     user_con_password VARCHAR(50) not null DEFAULT '',

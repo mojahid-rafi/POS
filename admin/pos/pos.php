@@ -6,10 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="../assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- PLUGINS STYLES-->
+    <link href="../assets/vendors/select2/dist/css/select2.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./pos_style.css">
-    <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.min.css">
 </head>
-<body class="lockscreen        pace-done pace-done" style="height: auto;">
+<body class="lockscreen pace-done pace-done" style="height: auto;">
 <div class="pace  pace-inactive pace-inactive">
     <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
         <div class="pace-progress-inner"></div>
@@ -17,8 +20,6 @@
     <div class="pace-activity"></div>
 </div>
 
-<!-- empty div for vuejs -->
-<div id="app"></div>
 
 <div class="wrapper thetop" style="height: auto;">
 
@@ -27,7 +28,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="m-6 mt-5 hidden-xs">
-                    <p><strong>Location:</strong> Awesome Shop 04/28/2020 12:47 <i class="fa fa-keyboard hover-q text-muted" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<table class='table table-condensed table-striped'>
+                    <p><strong>Location:</strong> Point Of Sale <i class="fa fa-keyboard hover-q text-muted" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<table class='table table-condensed table-striped'>
 	<tr>
 	    <th>Operations</th>
 	    <th>Keyboard Shortcut</th>
@@ -213,8 +214,9 @@
                                                         <select class="form-control mousetrap select2-hidden-accessible valid" id="customer_id" required="" style="width: 100%;" name="contact_id" tabindex="-1" aria-hidden="true" aria-required="true">
                                                             <option selected="selected" value="">Enter Customer name / phone</option>
                                                             <option value="1">Walk-In Customer</option>
-                                                            <option value="17">cashload.pk</option>
-                                                        </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-customer_id-container"><span class="select2-selection__rendered" id="select2-customer_id-container" title="cashload.pk">cashload.pk</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </select>
+                                                        <span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;">
+                                                            <span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-customer_id-container"><span class="select2-selection__rendered" id="select2-customer_id-container" title="cashload.pk">cashload.pk</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                                         <span class="input-group-btn">
                                 <button type="button" class="btn btn-default bg-white btn-flat add_new_customer" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
                               </span>
@@ -271,10 +273,10 @@
                                                         <td>
 
                                                             <div data-toggle="tooltip" data-placement="bottom" title="Edit product Unit Price and Tax">
-                                    <span class="text-link text-info cursor-pointer" data-toggle="modal" data-target="#row_edit_product_price_modal_14">
-                                      Apple iPhone 8 (Internal Memory:32 GB)<br>AS0015-1 Apple
-                                      &nbsp;<i class="fa fa-info-circle"></i>
-                                    </span>
+                                                                <span class="text-link text-info cursor-pointer" data-toggle="modal" data-target="#row_edit_product_price_modal_14">
+                                                                  Apple iPhone 8 (Internal Memory:32 GB)<br>AS0015-1 Apple
+                                                                  &nbsp;<i class="fa fa-info-circle"></i>
+                                                                </span>
                                                             </div>
                                                             <input type="hidden" class="enable_sr_no" value="0">
                                                             <input type="hidden" class="product_type" name="products[14][product_type]" value="variable">
@@ -375,122 +377,15 @@
                                                             <i class="fa fa-times text-danger pos_remove_row cursor-pointer" aria-hidden="true"></i>
                                                         </td>
                                                     </tr>
-                                                    <tr class="product_row" data-row_index="15">
-                                                        <td>
 
-                                                            <div data-toggle="tooltip" data-placement="bottom" title="Edit product Unit Price and Tax">
-                                    <span class="text-link text-info cursor-pointer" data-toggle="modal" data-target="#row_edit_product_price_modal_15">
-                                      Apple iPhone 8 (Color:Black)<br>AS0015-3 Apple
-                                      &nbsp;<i class="fa fa-info-circle"></i>
-                                    </span>
-                                                            </div>
-                                                            <input type="hidden" class="enable_sr_no" value="0">
-                                                            <input type="hidden" class="product_type" name="products[15][product_type]" value="variable">
-
-                                                            <div class="modal fade row_edit_product_price_model" id="row_edit_product_price_modal_15" tabindex="-1" role="dialog">
-                                                                <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">�</span></button>
-                                                                            <h4 class="modal-title" id="myModalLabel">Apple iPhone 8 (Color:Black) - AS0015-3</h4>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="row">
-                                                                                <div class="form-group col-xs-12 ">
-                                                                                    <label>Unit Price</label>
-                                                                                    <input type="text" name="products[15][unit_price]" class="form-control pos_unit_price input_number mousetrap" value="1,187.50">
-                                                                                </div>
-
-                                                                                <div class="form-group col-xs-12 col-sm-6 ">
-                                                                                    <label>Discount Type</label>
-                                                                                    <select class="form-control row_discount_type" name="products[15][line_discount_type]">
-                                                                                        <option value="fixed" selected="selected">Fixed</option>
-                                                                                        <option value="percentage">Percentage</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="form-group col-xs-12 col-sm-6 ">
-                                                                                    <label>Discount Amount</label>
-                                                                                    <input class="form-control input_number row_discount_amount" name="products[15][line_discount_amount]" type="text" value="0.00">
-                                                                                </div>
-                                                                                <div class="form-group col-xs-12 ">
-                                                                                    <label>Tax</label>
-
-                                                                                    <input class="item_tax" name="products[15][item_tax]" type="hidden" value="118.75">
-
-                                                                                    <select class="form-control tax_id" name="products[15][tax_id]">
-                                                                                        <option value="">Select</option>
-                                                                                        <option value="">None</option>
-                                                                                        <option value="1" selected="selected" data-rate="10">VAT@10%</option>
-                                                                                        <option value="2" data-rate="10">CGST@10%</option>
-                                                                                        <option value="3" data-rate="8">SGST@8%</option>
-                                                                                        <option value="4" data-rate="18">GST@18%</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="form-group col-xs-12">
-                                                                                    <label>Description</label>
-                                                                                    <textarea class="form-control" name="products[15][sell_line_note]" rows="3"></textarea>
-                                                                                    <p class="help-block">Add product IMEI, Serial number or other informations here.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Description modal end -->
-
-                                                        </td>
-
-                                                        <td>
-
-                                                            <input type="hidden" name="products[15][product_id]" class="form-control product_id" value="15">
-
-                                                            <input type="hidden" value="51" name="products[15][variation_id]" class="row_variation_id">
-
-                                                            <input type="hidden" value="1" name="products[15][enable_stock]">
-
-                                                            <div class="input-group input-number">
-                                                                <span class="input-group-btn"><button type="button" class="btn btn-default btn-flat quantity-down"><i class="fa fa-minus text-danger"></i></button></span>
-                                                                <input type="text" data-min="1" class="form-control pos_quantity input_number mousetrap input_quantity" value="1.00" name="products[15][quantity]" data-allow-overselling="false" data-decimal="0" data-rule-abs_digit="true" data-msg-abs_digit="Decimal value not allowed" data-rule-required="true" data-msg-required="This field is required" data-rule-max-value="30.0000" data-qty_available="30.0000" data-msg-max-value="Only 30.00 Pc(s) available" data-msg_max_default="Only 30.00 Pc(s) available">
-                                                                <span class="input-group-btn"><button type="button" class="btn btn-default btn-flat quantity-up"><i class="fa fa-plus text-success"></i></button></span>
-                                                            </div>
-
-                                                            <input type="hidden" name="products[15][product_unit_id]" value="1">
-                                                            <br>
-                                                            <select name="products[15][sub_unit_id]" class="form-control input-sm sub_unit">
-                                                                <option value="1" data-multiplier="1" data-unit_name="Pieces" data-allow_decimal="0">
-                                                                    Pieces
-                                                                </option>
-                                                            </select>
-
-                                                            <input type="hidden" class="base_unit_multiplier" name="products[15][base_unit_multiplier]" value="1">
-
-                                                            <input type="hidden" class="hidden_base_unit_sell_price" value="1187.5">
-
-                                                        </td>
-
-                                                        <td class="">
-                                                            <input type="text" name="products[15][unit_price_inc_tax]" class="form-control pos_unit_price_inc_tax input_number" value="1,306.25">
-                                                        </td>
-                                                        <td class="text-center v-center">
-                                                            <input type="hidden" class="form-control pos_line_total " value="1,306.25">
-                                                            <span class="display_currency pos_line_total_text " data-currency_symbol="true">$ 1,306.25</span>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <i class="fa fa-times text-danger pos_remove_row cursor-pointer" aria-hidden="true"></i>
-                                                        </td>
-                                                    </tr>
                                                     <tr class="product_row" data-row_index="16">
                                                         <td>
 
                                                             <div data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit product Unit Price and Tax">
-                                    <span class="text-link text-info cursor-pointer" data-toggle="modal" data-target="#row_edit_product_price_modal_16">
-                                      Acer Aspire E 15 (Color:White)<br>AS0017-2 Acer
-                                      &nbsp;<i class="fa fa-info-circle"></i>
-                                    </span>
+                                                                <span class="text-link text-info cursor-pointer" data-toggle="modal" data-target="#row_edit_product_price_modal_16">
+                                                                  Acer Aspire E 15 (Color:White)<br>AS0017-2 Acer
+                                                                  &nbsp;<i class="fa fa-info-circle"></i>
+                                                                </span>
                                                             </div>
                                                             <input type="hidden" class="enable_sr_no" value="0">
                                                             <input type="hidden" class="product_type" name="products[16][product_type]" value="variable">
@@ -4066,5 +3961,243 @@
 
 <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
 <div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+
+<script type="ecb35e86b379eb72b0932003-text/javascript">
+	$(document).ready( function(){
+        $('#essentials_dob').datepicker();
+		$('.clock_in_btn, .clock_out_btn').click( function() {
+            var type = $(this).data('type');
+            if (type == 'clock_in') {
+                $('#clock_in_clock_out_modal').find('#clock_in_text').removeClass('hide');
+                $('#clock_in_clock_out_modal').find('#clock_out_text').addClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_in_note').removeClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_out_note').addClass('hide');
+            } else if (type == 'clock_out') {
+                $('#clock_in_clock_out_modal').find('#clock_in_text').addClass('hide');
+                $('#clock_in_clock_out_modal').find('#clock_out_text').removeClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_in_note').addClass('hide');
+                $('#clock_in_clock_out_modal').find('.clock_out_note').removeClass('hide');
+            }
+            $('#clock_in_clock_out_modal').find('input#type').val(type);
+
+            $('#clock_in_clock_out_modal').modal('show');
+        });
+	});
+
+	$(document).on('submit', 'form#clock_in_clock_out_form', function(e) {
+        e.preventDefault();
+        $(this).find('button[type="submit"]').attr('disabled', true);
+        var data = $(this).serialize();
+
+        $.ajax({
+            method: $(this).attr('method'),
+            url: $(this).attr('action'),
+            dataType: 'json',
+            data: data,
+            success: function(result) {
+                if (result.success == true) {
+                    $('div#clock_in_clock_out_modal').modal('hide');
+
+                    var shift_details = document.createElement("div");
+                    if (result.current_shift) {
+                        shift_details.innerHTML = result.current_shift;
+                    }
+
+                    swal({
+                        title: result.msg,
+                        content: shift_details,
+                        icon: 'success'
+                    });
+
+                    if (typeof attendance_table !== 'undefined') {
+                        attendance_table.ajax.reload();
+                    }
+                    if (result.type == 'clock_in') {
+                        $('.clock_in_btn').addClass('hide');
+                        $('.clock_out_btn').removeClass('hide');
+                    } else if(result.type == 'clock_out') {
+                        $('.clock_out_btn').addClass('hide');
+                        $('.clock_in_btn').removeClass('hide');
+                    }
+                } else {
+                    var shift_details = document.createElement("p");
+                    if (result.shift_details) {
+                        shift_details.innerHTML = result.shift_details;
+                    }
+
+                    swal({
+                        title: result.msg,
+                        content: shift_details,
+                        icon: 'error'
+                    })
+                }
+                $('#clock_in_clock_out_form')[0].reset();
+                $('#clock_in_clock_out_form').find('button[type="submit"]').removeAttr('disabled');
+            },
+        });
+    });
+
+    $(document).on('click', '#get_current_location', function(){
+        getFullAddress();
+    });
+
+    function getFullAddress() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                $.ajax({
+                    url: '/user-location/' + latitude + ',' + longitude,
+                    dataType: 'json',
+                    success: function(result) {
+                        if (typeof result.address !== 'undefined') {
+
+                            $("input#clock_in_out_location").val(result.address);
+                            $("span.clock_in_out_location").text(result.address);
+                            $("div.ask_location").hide();
+                        } else if (typeof result.error_message !== 'undefined') {
+                            console.log(result.error_message);
+                        }
+                    }
+                });
+
+            },
+            () => {
+                $("div.ask_location").show();
+                $("span.location_required").text("Location is required, you must enable location")
+              console.log( "Error: The Geolocation service failed.");
+            }
+          );
+        } else {
+            $("div.ask_location").show();
+            $("span.location_required").text("Location is required, you must enable location")
+          // Browser doesn't support Geolocation
+          console.log("Browser doesn't support Geolocation");
+        }
+    }
+</script>
+<script type="ecb35e86b379eb72b0932003-text/javascript">
+    $(document).ready( function(){
+        var locale = "en";
+        var isRTL =  false;
+        $('#calendar').fullCalendar('option', {
+            locale: locale,
+            isRTL: isRTL
+        });
+    });
+</script>
+<div class="modal fade view_modal" tabindex="-1" role="dialog"
+     aria-labelledby="gridSystemModalLabel"></div>
+
+<script type="ecb35e86b379eb72b0932003-text/javascript">
+	$('#task_modal').on('shown.bs.modal', function() {
+	$('form#task_form .datepicker').datetimepicker({
+        format: moment_date_format + ' ' + moment_time_format,
+        ignoreReadonly: true,
+    });
+    $('form#task_form .select2').select2({ dropdownParent: $(this) });
+
+	tinymce.init({
+        selector: 'textarea#to_do_description',
+    });
+
+	if ($('#media_upload').length) {
+       $(this).find("div#media_upload").dropzone({
+            url: $('#media_upload_url').val(),
+            paramName: 'file',
+            uploadMultiple: true,
+            autoProcessQueue: false,
+            addRemoveLinks: true,
+            params: {
+            	'model_id': $('#model_id').val(),
+            	'model_type': $('#model_type').val(),
+            	'model_media_type': $('#model_media_type').val()
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(file, response) {
+                if (response.success) {
+                    toastr.success(response.msg);
+                    $("#task_modal").modal('hide');
+                } else {
+                    toastr.error(response.msg);
+                }
+            },
+        });
+    }
+
+	 //form validation
+	$("form#task_form").validate();
+});
+
+$('#task_modal').on('hide.bs.modal', function(){
+	tinymce.remove("textarea#to_do_description");
+});
+
+//form submit
+$(document).on('submit', 'form#task_form', function(e){
+	e.preventDefault();
+	var url = $(this).attr("action");
+	var method = $(this).attr("method");
+	var data = $("form#task_form").serialize();
+	var ladda = Ladda.create(document.querySelector('.ladda-button'));
+	ladda.start();
+	$.ajax({
+		method: method,
+		url: url,
+		data: data,
+		dataType: "json",
+		success: function(result){
+			ladda.stop();
+			if(result.success == true){
+				var myDropzone = Dropzone.forElement("#media_upload");
+
+				if (typeof result.todo_id !== 'undefined') {
+					myDropzone.options.params.model_id = result.todo_id;
+				}
+
+                myDropzone.processQueue();
+
+				if (typeof task_table !== 'undefined') {
+					task_table.ajax.reload();
+				}
+
+				if ($('#task_modal').length) {
+					$('#task_modal').modal('hide');
+				}
+
+				if ($('#calendar').length) {
+					$('#calendar').fullCalendar( 'refetchEvents' );
+				}
+			} else {
+				toastr.error(result.msg);
+			}
+		}
+	});
+});
+</script>
+
+
+<script src="../assets/vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- PAGE LEVEL PLUGINS-->
+<script src="../assets/vendors/chart.js/dist/Chart.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/jvectormap/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+<script src="../assets/vendors/jvectormap/jquery-jvectormap-us-aea-en.js" type="text/javascript"></script>
+.
+<script src="../assets/vendors/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/jquery-knob/dist/jquery.knob.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/moment/min/moment.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+<script src="../assets/vendors/jquery-minicolors/jquery.minicolors.min.js" type="text/javascript"></script>
+<script src="../assets/js/scripts/form-plugins.js" type="text/javascript"></script>
 </body>
 </html>

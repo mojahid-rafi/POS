@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
     // Select 2
-    $(".select2_demo_1").select2();
-    $(".select2_demo_2").select2({
+    $(".select2_style1").select2();
+    $(".select2_style2").select2({
         placeholder: "Select a state",
         allowClear: true
     });

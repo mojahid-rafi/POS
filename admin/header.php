@@ -28,10 +28,10 @@
     <header class="header">
         <div class="page-brand">
             <a class="link" href="index.html">
-                    <span class="brand">Donor
-                        <span class="brand-tip">Management</span>
+                    <span class="brand">JogBiog
+<!--                        <span class="brand-tip">Management</span>-->
                     </span>
-                <span class="brand-mini">BCM</span>
+                <span class="brand-mini">POS</span>
             </a>
         </div>
         <div class="flexbox flex-1">
@@ -88,25 +88,86 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
-                        <span class="nav-label">POS</span><i class="fa fa-angle-left arrow"></i></a>
+                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-product-hunt"></i>
+                        <span class="nav-label">Products</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./customer.php">Add Customer</a>
+                            <a href="./item_info.php">Add Product</a>
                         </li>
                         <li>
-                            <a href="./item_info.php">Item Information</a>
+                            <a href="./sale_details.php">Categories</a>
                         </li>
                         <li>
-                            <a href="./sale_details.php">Sale Details</a>
-                        </li>
-                        <li>
-                            <a href="./sale_master.php">Sale Master</a>
-                        </li>
-                        <li>
-                            <a href="./Supplier_form.php">Supplier Form</a>
+                            <a href="./sale_master.php">Brands</a>
                         </li>
 
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-user-circle"></i>
+                        <span class="nav-label">Party</span><i class="fa fa-angle-left arrow"></i></a>
+                    <ul class="nav-2-level collapse">
+                        <li>
+                            <a href="./customer.php">Customers</a>
+                        </li>
+                        <li>
+                            <a href="./Supplier_form.php">Suppliers</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-arrow-circle-down"></i>
+                        <span class="nav-label">Purchase</span><i class="fa fa-angle-left arrow"></i></a>
+                    <ul class="nav-2-level collapse">
+                        <li>
+                            <a href="./sale_details.php">Purchase Entry</a>
+                        </li>
+                        <li>
+                            <a href="./pos/pos.php">Purchase List</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-arrow-circle-down"></i>
+                        <span class="nav-label">Sale</span><i class="fa fa-angle-left arrow"></i></a>
+                    <ul class="nav-2-level collapse">
+                        <li>
+                            <a href="./sale_details.php">Sales Entry</a>
+                        </li>
+                        <li>
+                            <a href="./pos/pos.php">POS</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-users"></i>
+                        <span class="nav-label">User Management</span><i class="fa fa-angle-left arrow"></i></a>
+                    <ul class="nav-2-level collapse">
+                        <li>
+                            <a href="./customer.php">Users</a>
+                        </li>
+                        <li>
+                            <a href="./Supplier_form.php">Roles</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-cog"></i>
+                        <span class="nav-label">Settings</span><i class="fa fa-angle-left arrow"></i></a>
+                    <ul class="nav-2-level collapse">
+                        <li>
+                            <a href="./customer.php">Company Information</a>
+                        </li>
+                        <li>
+                            <a href="./Supplier_form.php">Localization</a>
+                        </li>
+                        <li>
+                            <a href="./Supplier_form.php">Invoice Settings</a>
+                        </li>
                     </ul>
                 </li>
 

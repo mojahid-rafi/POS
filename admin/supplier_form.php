@@ -21,7 +21,7 @@
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
-            <h1 class="page-title">Suppliers</h1>
+            <h1 class="page-title">Supplier</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="dashboard.php"><i class="la la-home font-20"></i></a>

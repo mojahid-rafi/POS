@@ -22,17 +22,12 @@
                 $uprice = $_POST['uprice'];
                 $lpprice = $_POST['lpprice'];
                 $barcode = $_POST['barcode'];
-                
 
-                
                 $insert = "INSERT INTO `item_info`(`item_code`, `catagory_id`, `unit`, `unit_price`, `last_pur_price`, `barcode`) VALUES ('{$icode}', '{$catid}', '{$unit}', '{$uprice}', '{$lpprice}', '{$barcode}')";
                 $con->query($insert);
 
-
             };
         ?>
-
-
 
         <div class="page-content fade-in-up">
             <div class="row">
@@ -41,14 +36,14 @@
                         <!-- modal button -->
                         <div class="ibox-head justify-content-end">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddItem">
                                 Add Item
                             </button>
                         </div>
                         <!-- modal button end -->
 
                         <!-- modal start -->
-                        <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd" aria-hidden="true">
+                        <div class="modal fade" id="AddItem" tabindex="-1" role="dialog" aria-labelledby="AddItem" aria-hidden="true">
                             <form action="" method="POST">
                                 <div class="modal-dialog modal-lg" role="">
                                     <div class="modal-content">
@@ -68,7 +63,7 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="form-control-label">Select Category</label>
+                                                        <label class="">Select Category</label>
                                                         <select name="catid" class="form-control select2_style1" style="width: 100%;">
                                                             <option value="1">Category 1</option>
                                                             <option value="2">Category 2</option>

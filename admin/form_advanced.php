@@ -24,7 +24,7 @@
                             <div class="ibox-body">
                                 <div class="form-group">
                                     <label class="form-control-label">Single select</label>
-                                    <select class="form-control select2_demo_1">
+                                    <select class="form-control select2_style1">
                                         <optgroup label="Alaskan/Hawaiian Time Zone">
                                             <option value="AK">Alaska</option>
                                             <option value="HI">Hawaii</option>
@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">Multiple select</label>
-                                    <select class="form-control select2_demo_1" multiple="">
+                                    <select class="form-control select2_style2" multiple="">
                                         <optgroup label="Alaskan/Hawaiian Time Zone">
                                             <option value="AK">Alaska</option>
                                             <option value="HI">Hawaii</option>

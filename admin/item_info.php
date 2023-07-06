@@ -87,25 +87,50 @@ if (isset($_POST['submit'])){
                                     </div>
                                 </div>
                                 <div class="row">
+                                <div class="col-sm-6 form-group">
+                                        <label class="">Select Brand</label>
+
+                                        <select name="brand_id" class="form-control select2_style1" style="width: 100%;">
+                                        <?php 
+                                            $select = 'SELECT * FROM brands';
+                                            $query = $con->query($select);
+                                            $result = $query->fetch_all(MYSQLI_ASSOC);
+                                            
+                                        ?>
+                                                <?php foreach($result as $value): ?>
+                                                    <option value="<?= $value['id']; ?>"><?= $value['brand_name']; ?></option>
+                                                    <tr>
+                                                        <td></td>
+                                                      
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                          
+
+                                        </select>
+                                    </div>
                                     <div class="col-sm-6 form-group">
                                         <label>Unit : </label>
                                         <input name="unit" class="form-control" type="text" placeholder="Unit">
                                     </div>
-                                    <div class="col-sm-6 form-group">
+
+                                </div>
+                                <div class="row">
+                                <div class="col-sm-6 form-group">
                                         <label>Unit Price :</label>
                                         <input name="uprice" class="form-control" type="text" placeholder="Unit Price">
                                     </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label>Last Per Price :</label>
                                         <input name="lpprice" class="form-control" type="text" placeholder="Last Per Price">
                                     </div>
-                                    <div class="col-sm-6 form-group">
+                                </div>
+                                <div class="row">
+                                <div class="col-sm-6 form-group">
                                         <label>Barcode :</label>
                                         <input name="barcode" class="form-control" type="text" placeholder="Barcode">
                                     </div>
                                 </div>
+
 
                                 <!--form body end -->
 
@@ -132,7 +157,6 @@ if (isset($_POST['submit'])){
                         <tr>
                             <th width="50px">SL</th>
                             <th>Item Code</th>
-                            <th>Catagory Id</th>
                             <th>Unit</th>
                             <th>Unit Price</th>
                             <th>Last Per Price </th>
@@ -146,7 +170,6 @@ if (isset($_POST['submit'])){
                             <tr>
                                 <td><?= $value['id']; ?></td>
                                 <td><?= $value['item_code']; ?></td>
-                                <td><?= $value['catagory_id']; ?></td>
                                 <td><?= $value['unit']; ?></td>
                                 <td><?= $value['unit_price']; ?></td>
                                 <td><?= $value['last_pur_price']; ?></td>

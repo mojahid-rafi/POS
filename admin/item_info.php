@@ -16,6 +16,7 @@
     <!--    Enter Your Content Here-->
 <?php
 if (isset($_POST['submit'])){
+    $item_name = $_POST['iname'];
     $icode = $_POST['icode'];
     $catid = $_POST['catid'];
     $unit = $_POST['unit'];
@@ -23,7 +24,7 @@ if (isset($_POST['submit'])){
     $lpprice = $_POST['lpprice'];
     $barcode = $_POST['barcode'];
 
-    $insert = "INSERT INTO `item_info`(`item_code`, `catagory_id`, `unit`, `unit_price`, `last_pur_price`, `barcode`) VALUES ('{$icode}', '{$catid}', '{$unit}', '{$uprice}', '{$lpprice}', '{$barcode}')";
+    $insert = "INSERT INTO `item_info`(`item_name`,`item_code`, `catagory_id`, `unit`, `unit_price`, `last_pur_price`, `barcode`) VALUES ('{$item_name}','{$icode}', '{$catid}', '{$unit}', '{$uprice}', '{$lpprice}', '{$barcode}')";
     $con->query($insert);
 
 };
@@ -69,6 +70,12 @@ if (isset($_POST['submit'])){
                                         <input name="icode" class="form-control" type="text" placeholder="Item Code">
                                     </div>
                                     <div class="col-sm-6 form-group">
+                                        <label>Item Name : </label>
+                                        <input name="iname" class="form-control" type="text" placeholder="Item Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
                                         <label class="">Select Category</label>
 
                                         <select name="catid" class="form-control select2_style1" style="width: 100%;">
@@ -79,9 +86,7 @@ if (isset($_POST['submit'])){
                                                 <?php endforeach; ?>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-sm-6 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label class="">Select Brand</label>
 
                                         <select name="brand_id" class="form-control select2_style1" style="width: 100%;">
@@ -93,21 +98,23 @@ if (isset($_POST['submit'])){
                                                 foreach($result as $value): ?>
                                                     <option value="<?= $value['id']; ?>"><?= $value['brand_name']; ?></option>
                                                 <?php endforeach; ?>
-                                          
-
-                                        </select>
+                                          </select>
                                     </div>
+                                </div>
+                                <div class="row">
+
                                     <div class="col-sm-6 form-group">
                                         <label>Unit : </label>
                                         <input name="unit" class="form-control" type="text" placeholder="Unit">
                                     </div>
-
-                                </div>
-                                <div class="row">
-                                <div class="col-sm-6 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label>Unit Price :</label>
                                         <input name="uprice" class="form-control" type="text" placeholder="Unit Price">
                                     </div>
+
+                                </div>
+                                <div class="row">
+
                                     <div class="col-sm-6 form-group">
                                         <label>Last Per Price :</label>
                                         <input name="lpprice" class="form-control" type="text" placeholder="Last Per Price">
@@ -145,6 +152,7 @@ if (isset($_POST['submit'])){
 
                         <tr>
                             <th width="50px">SL</th>
+                            <th>Item Name</th>
                             <th>Item Code</th>
                             <th>Unit</th>
                             <th>Unit Price</th>
@@ -158,6 +166,7 @@ if (isset($_POST['submit'])){
                         <?php foreach($result as $value): ?>
                             <tr>
                                 <td><?= $value['id']; ?></td>
+                                <td><?= $value['item_name']; ?></td>
                                 <td><?= $value['item_code']; ?></td>
                                 <td><?= $value['unit']; ?></td>
                                 <td><?= $value['unit_price']; ?></td>
@@ -184,5 +193,6 @@ if (isset($_POST['submit'])){
             </div>
         </div>
     </div>
+  </div>
 
 <?php include ("./footer.php"); ?>

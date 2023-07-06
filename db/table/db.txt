@@ -1,11 +1,18 @@
 CREATE TABLE item_info(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    item_code VARCHAR(20) not null DEFAULT '',
-    catagory_id VARCHAR(20) not null DEFAULT '',
+	item_code VARCHAR(20) not null DEFAULT '',
+    item_name VARCHAR(30) not null DEFAULT '',
+    category_id VARCHAR(20) not null DEFAULT '',
+    brand_id VARCHAR(20) not null DEFAULT '',
     unit VARCHAR(30) not null DEFAULT '',
     unit_price Float(10,2) not null DEFAULT 0,
+	rol INT not null DEFAULT 0,
     last_pur_price float(10,2) not null DEFAULT 0,
     barcode VARCHAR(20) not null DEFAULT '',
+	sts INT not null DEFAULT 1,
+	stock_mantain not null DEFAULT 1,
+	op_stock float(10,2) not null DEFAULT 0, 
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     update_at datetime null
     
@@ -17,14 +24,15 @@ CREATE TABLE item_info(
 CREATE TABLE customer(
 	id INT AUTO_INCREMENT PRIMARY KEY,
    	party_name VARCHAR(30) not null DEFAULT '',
-    	party_type VARCHAR(30) not null DEFAULT '',
+    party_type VARCHAR(30) not null DEFAULT '',
  	address_ar VARCHAR(50) not null DEFAULT '',
   	phone VARCHAR(15) not null DEFAULT '',
-    	email VARCHAR(30) not null DEFAULT '',
+    email VARCHAR(30) not null DEFAULT '',
   	contact_person VARCHAR(30) not null DEFAULT '',
    	cp_phone VARCHAR(15) not null DEFAULT '',
    	acct_head VARCHAR(30) not null DEFAULT '',
    	head_type VARCHAR(30) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
    	create_at timestamp DEFAULT CURRENT_TIMESTAMP,
    	updated_at datetime null
     
@@ -47,6 +55,7 @@ CREATE TABLE sale_mastr(
     due FLOAT(10,2) not null DEFAULT 0,
     pay_mode FLOAT(10,2) not null DEFAULT 0,
     sale_date DATETIME null,
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     update_at datetime
 );
@@ -65,6 +74,7 @@ CREATE TABLE sale_details(
     vat FLOAT(10,2) not null DEFAULT 0,
     total FLOAT(10,2) not null DEFAULT 0,
     sale_date DATETIME null,
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp default CURRENT_TIMESTAMP,
     update_at DATETIME null
 );
@@ -81,6 +91,7 @@ CREATE TABLE supplier(
     cp_phone VARCHAR(15) not null DEFAULT '',
     acct_head VARCHAR(30) not null DEFAULT '',
     head_type VARCHAR(30) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     updated_at datetime null
     
@@ -98,6 +109,7 @@ CREATE TABLE users(
     sts VARCHAR(50) not null DEFAULT '',
     user_password VARCHAR(50) not null DEFAULT '',
     user_con_password VARCHAR(50) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
     crete_at timestamp default CURRENT_TIMESTAMP,
     update_at datetime null
 );
@@ -108,6 +120,7 @@ create TABLE roles(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     role_name VARCHAR(30) not null DEFAULT '',
     sts VARCHAR(50) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     update_at datetime null
 );
@@ -116,8 +129,9 @@ create TABLE roles(
 
 CREATE TABLE categories(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    cat_name VARCHAR(50) not null DEFAULT '',
+    name VARCHAR(50) not null DEFAULT '',
     discription VARCHAR(250) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     update_at datetime null
     
@@ -127,7 +141,26 @@ CREATE TABLE categories(
 
 CREATE TABLE brands(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    brand_name VARCHAR(30) not null DEFAULT '',
+    name VARCHAR(30) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
     create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    update_at DATETIME null
+);
+
+#-----------------------------------------------------------------
+
+CREATE TABLE company(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    comname VARCHAR(50) not null DEFAULT '',
+    comlogo VARCHAR(255) not null DEFAULT '',
+    address VARCHAR(100) not null DEFAULT '',
+    comweb VARCHAR(30) not null DEFAULT '',
+    phone VARCHAR(15) not null DEFAULT '',
+    email VARCHAR(30) not null DEFAULT '',
+    fax VARCHAR(20) not null DEFAULT '',
+    rheader VARCHAR(50) not null DEFAULT '',
+    rpolicy VARCHAR(250) not null DEFAULT '',
+	user_id VARCHAR(30) not null DEFAULT '',
+    create_at timestamp DEFAULT CURRENT_TIMESTAMP,
     update_at DATETIME null
 );

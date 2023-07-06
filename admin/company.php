@@ -15,12 +15,19 @@
          <!--    Enter Your Content Here-->
         <?php
             if(isset($_POST['submit'])){
-                $cname = $_POST['comname'];
-                $cname = $_POST['comlogo'];
-                $cname = $_POST['comname'];
-                $cname = $_POST['comname'];
-                $cname = $_POST['comname'];
-                $cname = $_POST['comname'];
+                $comname = $_POST['comname'];
+                $comlogo = $_POST['comlogo'];
+                $address = $_POST['address'];
+                $comweb = $_POST['comweb'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $fax = $_POST['fax'];
+                $rheader = $_POST['rheader'];
+                $rpolicy = $_POST['rpolicy'];
+
+                $insert = "INSERT INTO `company`(`comname`, `comlogo`, `address`, `comweb`, `phone`, `email`, `fax`, `rheader`, `rpolicy`) VALUES ('{$comname}', '{$comlogo}', '{$address}', '{$comweb}', '{$phone}', '{$email}', '{$fax}', '{$rheader}', '{$rpolicy}')";
+
+                $con->query($insert);
             }
         ?>
 
@@ -32,19 +39,19 @@
         <!-- modal button -->
         <div class="ibox-head justify-content-end">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
                 Add Customer
-            </button>
+            </button> -->
         </div>
         <!-- modal button end -->
 
         <!-- modal start -->
     <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd" aria-hidden="true">
         <form action="" method="POST">
-              <div class="modal-dialog modal-lg" role="document">
+              <!-- <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Company</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Company</h5> -->
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
@@ -78,7 +85,7 @@
                         <label>Phone :</label>
                         <input name="phone" class="form-control" type="text" placeholder="Phone"></div>
                     <div class="col-sm-6 form-group">
-                        <label>Email:</label>
+                        <label>Email :</label>
                         <input name="email" class="form-control" type="email" placeholder="Email Address">
                     </div>
                 </div>
@@ -101,14 +108,24 @@
 						<!--form body end -->
 						
                       </div>
-                      <div class="modal-footer">
+                      <!-- <div class="modal-footer"> -->
 <!-- <btton type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                          <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
-                      </div>
+                          <button name="submit" class="btn btn-default " type="submit">Update</button>
+                      <!-- </div>
                   </div>
-              </div>
+              </div> -->
         </form>
     </div>
+
+    <?php
+        $select = "SELECT * FROM company";
+        $query = $con->query($select);
+        $fetch = $query->fetch_all(MYSQLI_ASSOC);
+    ?>
+
+       </div>
+   </div>
+
   </div>        
 </div>
     

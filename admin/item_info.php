@@ -66,14 +66,23 @@ if (isset($_POST['submit'])){
                                     </div>
                                     <div class="col-sm-6 form-group">
                                         <label class="">Select Category</label>
+
                                         <select name="catid" class="form-control select2_style1" style="width: 100%;">
-                                            <option value="1">Category 1</option>
-                                            <option value="2">Category 2</option>
-                                            <option value="3">Category 3</option>
-                                            <option value="4">Category 4</option>
-                                            <option value="5">Category 5</option>
-                                            <option value="6">Category 6</option>
-                                            <option value="7">Category 7</option>
+                                        <?php 
+                                            $select = 'SELECT * FROM categories';
+                                            $query = $con->query($select);
+                                            $result = $query->fetch_all(MYSQLI_ASSOC);
+                                            
+                                        ?>
+                                                <?php foreach($result as $value): ?>
+                                                    <option value="<?= $value['id']; ?>"><?= $value['cat_name']; ?></option>
+                                                    <tr>
+                                                        <td></td>
+                                                      
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                          
+
                                         </select>
                                     </div>
                                 </div>

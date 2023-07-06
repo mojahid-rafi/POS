@@ -3358,7 +3358,7 @@ body.has-backdrop .backdrop {
       color: #fff; }
 
 .page-sidebar {
-  background-color: #253544; }
+  background-color: #000f1c; }
   .page-sidebar .admin-block .admin-info {
     color: #fff; }
     .page-sidebar .admin-block .admin-info small {
@@ -3370,28 +3370,28 @@ body.has-backdrop .backdrop {
 .side-menu > li a {
   color: #b4bcc8; }
   .side-menu > li a:hover, .side-menu > li a:focus {
-    color: #fff;
-    background-color: #3498db; }
+    color: #000f1c;
+    background-color: #fff; }
 
 .side-menu > li.active {
   background-color: #2e4255; }
   .side-menu > li.active > a, .side-menu > li.active > a:hover, .side-menu > li.active > a:focus {
-    color: #fff;
-    background-color: #3498db; }
+    color: #000f1c;
+    background-color: #fff; }
 
 .side-menu li a.active {
   color: #fff; }
 
 .sidebar-mini .side-menu > li:hover > a {
-  background-color: #3498db;
-  color: #fff; }
+  color: #000f1c;
+  background-color: #fff; }
 
 .sidebar-mini .side-menu > li:hover .nav-2-level {
-  background-color: #253544; }
+  background-color: #fff; }
 
 .header .page-brand {
-  color: #fff;
-  background-color: #374f65; }
+  color: #000f1c;
+  background-color: #fff; }
 
 .legendLabel {
   padding-left: 5px; }

@@ -83,13 +83,16 @@
             </div>
             <ul class="side-menu metismenu">
                 <li>
-                    <a class="active" href="./dashboard.php"><i class="sidebar-item-icon fa fa-th-large"></i>
+                    <a class="" href="./dashboard.php"><i class="sidebar-item-icon fa fa-th-large"></i>
                         <span class="nav-label">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;"><i class="sidebar-item-icon fa fa-product-hunt"></i>
-                        <span class="nav-label">Products</span><i class="fa fa-angle-left arrow"></i></a>
+                    <a href="javascript:;">
+                        <i class="sidebar-item-icon fa fa-product-hunt"></i>
+                        <span class="nav-label">Products</span>
+                        <i class="fa fa-angle-left arrow"></i>
+                    </a>
                     <ul class="nav-2-level collapse">
                         <li>
                             <a href="./item_info.php">Add Product</a>

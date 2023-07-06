@@ -23,13 +23,8 @@
             $select = "SELECT * FROM item_info WHERE id=$id";
             $query = $con->query($select);
             while($fetch = mysqli_fetch_assoc($query)){
-                ?>
+            ?>
            
-
-                
-
-
-
         <form action="update_item_info.php" method="POST">
         <input type="text" name="id" hidden value="<?php echo $fetch['id'];  ?>" >
                                   <div class="modal-dialog modal-lg" role="document">

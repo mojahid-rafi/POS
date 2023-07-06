@@ -57,7 +57,11 @@ if (isset($_POST['submit'])){
 
                                 <!--form body start here-->
 
-
+                                <?php
+                                $select = 'SELECT * FROM categories';
+                                $query = $con->query($select);
+                                $result = $query->fetch_all(MYSQLI_ASSOC);
+                                ?>
 
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
@@ -68,21 +72,11 @@ if (isset($_POST['submit'])){
                                         <label class="">Select Category</label>
 
                                         <select name="catid" class="form-control select2_style1" style="width: 100%;">
-                                        <?php 
-                                            $select = 'SELECT * FROM categories';
-                                            $query = $con->query($select);
-                                            $result = $query->fetch_all(MYSQLI_ASSOC);
-                                            
-                                        ?>
-                                                <?php foreach($result as $value): ?>
+                                            <option disabled selected value="0">Select Category</option>
+                                            <?php
+                                                foreach($result as $value): ?>
                                                     <option value="<?= $value['id']; ?>"><?= $value['cat_name']; ?></option>
-                                                    <tr>
-                                                        <td></td>
-                                                      
-                                                    </tr>
                                                 <?php endforeach; ?>
-                                          
-
                                         </select>
                                     </div>
                                 </div>
@@ -91,18 +85,13 @@ if (isset($_POST['submit'])){
                                         <label class="">Select Brand</label>
 
                                         <select name="brand_id" class="form-control select2_style1" style="width: 100%;">
+                                            <option disabled value="0">Select Brand</option>
                                         <?php 
                                             $select = 'SELECT * FROM brands';
                                             $query = $con->query($select);
                                             $result = $query->fetch_all(MYSQLI_ASSOC);
-                                            
-                                        ?>
-                                                <?php foreach($result as $value): ?>
+                                                foreach($result as $value): ?>
                                                     <option value="<?= $value['id']; ?>"><?= $value['brand_name']; ?></option>
-                                                    <tr>
-                                                        <td></td>
-                                                      
-                                                    </tr>
                                                 <?php endforeach; ?>
                                           
 

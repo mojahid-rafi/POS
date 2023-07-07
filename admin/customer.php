@@ -23,7 +23,7 @@
                 $cpphone = $_POST['cpphone'];
 
                 
-                $insert = "INSERT INTO customer (party_name, party_type, address_ar, phone, email, contact_person, cp_phone) VALUES ('{$pname}', '{$ptype}', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}')";
+                $insert = "INSERT INTO customers (party_name, party_type, address_ar, phone, email, contact_person, cp_phone) VALUES ('{$pname}', '{$ptype}', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}')";
                 $con->query($insert);
 
 
@@ -115,7 +115,7 @@
                           </div>
         <!-- modal end -->
         <?php 
-            $select = 'SELECT * FROM customer';
+            $select = 'SELECT * FROM customers';
             $query = $con->query($select);
             $result = $query->fetch_all(MYSQLI_ASSOC);
         ?>

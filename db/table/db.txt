@@ -10,7 +10,7 @@ CREATE TABLE item_info(
     last_pur_price float(10,2) not null DEFAULT 0,
     barcode VARCHAR(20) not null DEFAULT '',
 	sts INT not null DEFAULT 1,
-	stock_mantain not null DEFAULT 1,
+	stock_mantain INT not null DEFAULT 1,
 	op_stock float(10,2) not null DEFAULT 0, 
 	user_id VARCHAR(30) not null DEFAULT '',
     create_at timestamp DEFAULT CURRENT_TIMESTAMP,

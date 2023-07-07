@@ -117,7 +117,7 @@
                                             <th>Contact Person</th>
                                             <th>Contact Person Phone</th>
                                         </tr>
-                                                </thead>
+                                    </thead>
 
                                     <tbody>
                                         <?php foreach($result as $value): ?>

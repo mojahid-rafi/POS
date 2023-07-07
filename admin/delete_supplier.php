@@ -1,10 +1,8 @@
 <?php require ("./src/database.php"); ?>
 <?php
-    
-    
     $id = $_GET['id'];
 
-    $delete = "DELETE FROM supplier WHERE id=$id";
+    $delete = "DELETE FROM suppliers WHERE id=$id";
 
     $con->query($delete);
     

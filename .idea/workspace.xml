@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="41ec23f3-8a76-4489-9034-c87a5db04aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/delete_customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete_customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/delete_supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete_supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/editcustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editcustomer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/editsupplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editsupplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/supplier_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/supplier_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/update_supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update_supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/updatecustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/updatecustomer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,10 +22,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2431">
-              <caret line="143" column="18" lean-forward="true" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+            <state relative-caret-position="763">
+              <caret line="107" column="58" lean-forward="true" selection-start-line="107" selection-start-column="58" selection-end-line="107" selection-end-column="58" />
               <folding>
-                <element signature="e#2577#2584#1#HTML" expanded="true" />
+                <element signature="e#2574#2581#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,20 +188,21 @@
       <workItem from="1688631866260" duration="221000" />
       <workItem from="1688664549802" duration="3415000" />
       <workItem from="1688720384756" duration="2513000" />
-      <workItem from="1688734535326" duration="3877000" />
+      <workItem from="1688734535326" duration="4185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33602000" />
+    <option name="totallyTimeSpent" value="33910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18053691" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18053691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -384,10 +391,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="18" lean-forward="true" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+        <state relative-caret-position="763">
+          <caret line="107" column="58" lean-forward="true" selection-start-line="107" selection-start-column="58" selection-end-line="107" selection-end-column="58" />
           <folding>
-            <element signature="e#2577#2584#1#HTML" expanded="true" />
+            <element signature="e#2574#2581#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

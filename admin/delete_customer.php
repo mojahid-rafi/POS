@@ -4,7 +4,7 @@
     
     $id = $_GET['id'];
 
-    $delete = "DELETE FROM customer WHERE id=$id";
+    $delete = "DELETE FROM customers WHERE id=$id";
 
     $con->query($delete);
     

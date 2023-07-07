@@ -1,16 +1,7 @@
 <?php include ("./header.php"); ?>
 <?php require ("./src/database.php"); ?>
 
-<?php
-            if (isset($_POST['submit'])){
-                $cat_name = $_POST['cat_name'];
-                $dis = $_POST['dis'];
-  
-                $insert = "INSERT INTO `categories`(`cat_name`, `discription`) VALUES ('{$cat_name}', '{$dis}')";
-                $con->query($insert);
 
-};
-?>
 
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
@@ -31,6 +22,16 @@
                     <div class="ibox">
         <!-- modal button -->
         <div class="ibox-head justify-content-end">
+        <?php
+            if (isset($_POST['submit'])){
+                $cat_name = $_POST['cat_name'];
+                $dis = $_POST['dis'];
+  
+                $insert = "INSERT INTO `categories`(`name`, `discription`,`user_id`) VALUES ('{$cat_name}','{$dis}','0')";
+                $con->query($insert);
+
+            };
+            ?>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
                 Add Catagories
@@ -107,7 +108,7 @@
                                 <?php foreach($result as $value): ?>
                             <tr>
                                 <td><?= $value['id']; ?></td>
-                                <td><?= $value['cat_name']; ?></td>
+                                <td><?= $value['name']; ?></td>
                                 <td><?= $value['discription']; ?></td>
 
                                 <td> 

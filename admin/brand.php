@@ -5,7 +5,7 @@
             if (isset($_POST['submit'])){
                 $bname = $_POST['bname'];
   
-                $insert = "INSERT INTO `brands`(`brand_name`) VALUES ('{$bname}')";
+                $insert = "INSERT INTO `brands`(`name`,`user_id`) VALUES ('{$bname}','0')";
                 $con->query($insert);
 
 };
@@ -102,7 +102,7 @@
                                 <?php foreach($result as $value): ?>
                             <tr>
                                 <td><?= $value['id']; ?></td>
-                                <td><?= $value['brand_name']; ?></td>
+                                <td><?= $value['name']; ?></td>
 
                                 <td> 
                                     <a href="edit_brand.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>

@@ -44,7 +44,7 @@
                                           <div class="row">
                                         <div class="col-sm-6 form-group">
                                             <label>Brands name : </label>
-                                            <input name="bname" class="form-control" type="text" placeholder="Item Code" value="<?php echo $fetch['brand_name']; ?>">
+                                            <input name="bname" class="form-control" type="text" placeholder="Item Code" value="<?php echo $fetch['name']; ?>">
                                         </div>
                                         
 											<!--form body end -->

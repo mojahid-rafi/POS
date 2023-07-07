@@ -10,7 +10,7 @@
        $dis = $_POST['dis'];
 
 
-      $update = "UPDATE categories set cat_name='{$cat_name}', discription='{$dis}'  where id=$id";
+      $update = "UPDATE categories set name='{$cat_name}', discription='{$dis}'  where id=$id";
 
       $con->query($update);
     }

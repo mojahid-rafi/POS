@@ -16,15 +16,20 @@
     <!--    Enter Your Content Here-->
 <?php
 if (isset($_POST['submit'])){
+    $item_code = $_POST['icode'];
     $item_name = $_POST['iname'];
-    $icode = $_POST['icode'];
-    $catid = $_POST['catid'];
+    $cat_id = $_POST['cat_id'];
+    $brand_id = $_POST['brand_id'];
     $unit = $_POST['unit'];
     $uprice = $_POST['uprice'];
+    $reolevel = $_POST['reolevel'];
     $lpprice = $_POST['lpprice'];
     $barcode = $_POST['barcode'];
+    $sts = $_POST['sts'];
+    $stmaintain = $_POST['stmaintain'];
+    $opstock = $_POST['opstock'];
 
-    $insert = "INSERT INTO `item_info`(`item_name`,`item_code`, `catagory_id`, `unit`, `unit_price`, `last_pur_price`, `barcode`) VALUES ('{$item_name}','{$icode}', '{$catid}', '{$unit}', '{$uprice}', '{$lpprice}', '{$barcode}')";
+    $insert = "INSERT INTO `item_info`(`item_code`, `item_name`, `category_id`, `brand_id`, `unit`, `unit_price`, `rol`, `last_pur_price`, `barcode`, `sts`, `stock_mantain`, `op_stock`,`user_id`) VALUES ('{$item_code}', '{$item_name}', '{$cat_id}', '{$brand_id}', '{$unit}', '{$uprice}', '{$reolevel}', '{$lpprice}', '{$barcode}', '{$sts}', '{$stmaintain}', '{$opstock}','0')";
     $con->query($insert);
 
 };
@@ -74,11 +79,11 @@ if (isset($_POST['submit'])){
                                     $result = $query->fetch_all(MYSQLI_ASSOC);
                                 ?>
                                 <label class="">Select Category</label>
-                                <select name="catid" class="form-control select2_style1" style="width: 100%;">
+                                <select name="cat_id" class="form-control select2_style1" style="width: 100%;">
                                     <option disabled selected value="0">Select Category</option>
                                     <?php
                                         foreach($result as $value): ?>
-                                            <option value="<?= $value['id']; ?>"><?= $value['cat_name']; ?></option>
+                                            <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -91,7 +96,7 @@ if (isset($_POST['submit'])){
                                     $query = $con->query($select);
                                     $result = $query->fetch_all(MYSQLI_ASSOC);
                                         foreach($result as $value): ?>
-                                            <option value="<?= $value['id']; ?>"><?= $value['brand_name']; ?></option>
+                                            <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
                                         <?php endforeach; ?>
                                   </select>
                             </div>
@@ -124,8 +129,8 @@ if (isset($_POST['submit'])){
                             <div class="col-sm-6 form-group">
                                 <label>Status :</label>
                                 <select name="sts" id="" class="form-control" >
-                                    <option value="active">Active</option>
-                                    <option value="inactive">Inactive</option>
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
                                 </select>
                             </div>
                         </div>
@@ -133,8 +138,8 @@ if (isset($_POST['submit'])){
                             <div class="col-sm-6 form-group">
                                 <label>stock maintain :</label>
                                 <select name="stmaintain" id="" class="form-control" >
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
                                 </select>
                             </div>
                             <div class="col-sm-6 form-group">
@@ -164,14 +169,18 @@ if (isset($_POST['submit'])){
 
                         <tr>
                             <th width="50px">SL</th>
-                            <th>Item Name</th>
                             <th>Item Code</th>
-                            <th>Unit</th>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Unit </th>
                             <th>Unit Price</th>
+                            <th>Re Order Level</th>
                             <th>Last Per Price </th>
                             <th>Barcode</th>
-                            <th>Create At</th>
-                            <th>Update At</th>
+                            <th>Status</th>
+                            <th>stock maintain</th>
+                            <th>Opening Stock</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -180,12 +189,16 @@ if (isset($_POST['submit'])){
                                 <td><?= $value['id']; ?></td>
                                 <td><?= $value['item_name']; ?></td>
                                 <td><?= $value['item_code']; ?></td>
+                                <td><?= $value['category_id']; ?></td>
+                                <td><?= $value['brand_id']; ?></td>
                                 <td><?= $value['unit']; ?></td>
                                 <td><?= $value['unit_price']; ?></td>
+                                <td><?= $value['rol']; ?></td>
                                 <td><?= $value['last_pur_price']; ?></td>
                                 <td><?= $value['barcode']; ?></td>
-                                <td><?= $value['create_at']; ?></td>
-                                <td><?= $value['update_at']; ?></td>
+                                <td><?= $value['sts']; ?></td>
+                                <td><?= $value['stock_mantain']; ?></td>
+                                <td><?= $value['op_stock']; ?></td>
                                 <td>
                                     <a href="edit_item_info.php?id=<?= $value['id']; ?>"
                                        class="btn btn-default btn-xs m-r-5">

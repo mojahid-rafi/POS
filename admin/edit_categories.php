@@ -44,7 +44,7 @@
                                           <div class="row">
                                         <div class="col-sm-12 form-group">
                                         <label>Catagory Name : </label>
-                                            <input name="cat_name" class="form-control" type="text" placeholder="Catagory Name" value="<?php echo $fetch['cat_name']; ?>" >
+                                            <input name="cat_name" class="form-control" type="text" placeholder="Catagory Name" value="<?php echo $fetch['name']; ?>" >
                                             <label>Discription : </label>
                                             <textarea name="dis" class="form-control" id="" cols="2" rows="2" placeholder="Discription" value="<?php echo $fetch['discription']; ?>" ></textarea>
                                         </div>

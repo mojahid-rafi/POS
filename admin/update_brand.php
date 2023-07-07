@@ -9,7 +9,7 @@
        $bname = $_POST['bname'];
 
 
-      $update = "UPDATE brands set brand_name='{$bname}' where id=$id";
+      $update = "UPDATE brands set name='{$bname}' where id=$id";
 
       $con->query($update);
     }

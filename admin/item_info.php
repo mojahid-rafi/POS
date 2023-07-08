@@ -179,8 +179,7 @@ if (isset($_POST['submit'])){
                             <th>Last Per Price </th>
                             <th>Barcode</th>
                             <th>Status</th>
-                            <th>stock maintain</th>
-                            <th>Opening Stock</th>
+                            <th>Stock</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -197,7 +196,6 @@ if (isset($_POST['submit'])){
                                 <td><?= $value['last_pur_price']; ?></td>
                                 <td><?= $value['barcode']; ?></td>
                                 <td><?= $value['sts']; ?></td>
-                                <td><?= $value['stock_mantain']; ?></td>
                                 <td><?= $value['op_stock']; ?></td>
                                 <td>
                                     <a href="edit_item_info.php?id=<?= $value['id']; ?>"

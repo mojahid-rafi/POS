@@ -8,6 +8,7 @@
     <title>Dashboard - Point of Sale</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/vendors/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css" />
     <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="./assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet"/>
     <!-- PLUGINS STYLES-->

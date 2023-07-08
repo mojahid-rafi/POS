@@ -1,3 +1,14 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if(!isset($_SESSION['user_name']))
+    {
+        header("location:login.php");
+    }
+?>
+
 <?php include ("./header.php"); ?>
 
     <div class="content-wrapper">

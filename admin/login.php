@@ -25,8 +25,16 @@
 <body class="bg-silver-300">
     <div class="content">
         <div class="brand">
-            <a class="link" href="./login.php">POS</a>
+            <a class="link" href="./login.php"><img src="./assets/img/logo.png" class="img-fluid" alt=""></a>
         </div>
+        <?php if (isset($_SESSION['msg'])) { ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Message!</strong>  <?php echo $_SESSION['msg']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php } ?>
         <form id="login-form" action="auth.php" method="post">
             <h2 class="login-title">Log in</h2>
             <div class="form-group">
@@ -51,13 +59,6 @@
                 <input name="submit" class="btn btn-info btn-block" type="submit" value="Login">
             </div>
         </form>
-
-        <?php
-            if (isset($_SESSION['msg']))
-            {
-                echo $_SESSION['msg'];
-            }
-        ?>
     </div>
     <!-- BEGIN PAGA BACKDROPS-->
     <div class="sidenav-backdrop backdrop"></div>

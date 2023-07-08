@@ -21,7 +21,7 @@
         }
         else
         {
-            $msg = "Invalid Email Id OR Password";
+            $msg = "Invalid Email ID OR Password";
             $_SESSION['msg'] = $msg;
             header("location:login.php");
         }

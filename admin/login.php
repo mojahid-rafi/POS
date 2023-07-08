@@ -1,3 +1,8 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,12 +21,13 @@
     <link href="./assets/css/pages/auth-light.css" rel="stylesheet" />
 </head>
 
+
 <body class="bg-silver-300">
     <div class="content">
         <div class="brand">
             <a class="link" href="./login.php">POS</a>
         </div>
-        <form id="login-form" action="javascript:;" method="post">
+        <form id="login-form" action="auth.php" method="post">
             <h2 class="login-title">Log in</h2>
             <div class="form-group">
                 <div class="input-group-icon right">
@@ -42,9 +48,16 @@
                 <a href="javascript:;">Forgot password?</a>
             </div>
             <div class="form-group">
-                <button class="btn btn-info btn-block" type="submit">Login</button>
+                <input name="submit" class="btn btn-info btn-block" type="submit" value="Login">
             </div>
         </form>
+
+        <?php
+            if (isset($_SESSION['msg']))
+            {
+                echo $_SESSION['msg'];
+            }
+        ?>
     </div>
     <!-- BEGIN PAGA BACKDROPS-->
     <div class="sidenav-backdrop backdrop"></div>

@@ -15,14 +15,13 @@
         <?php
             if (isset($_POST['submit'])){
                 $pname = $_POST['pname'];
-                $ptype = $_POST['ptype'];
                 $phone = $_POST['phone'];
                 $email = $_POST['email'];
                 $address = $_POST['address'];
                 $conpersone = $_POST['conpersone'];
                 $cpphone = $_POST['cpphone'];
 
-                $insert = "INSERT INTO customers (party_name, party_type, address_ar, phone, email, contact_person, cp_phone) VALUES ('{$pname}', '{$ptype}', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}')";
+                $insert = "INSERT INTO customers (party_name,party_type, address_ar, phone, email, contact_person, cp_phone,user_id) VALUES ('{$pname}','customer', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}','0')";
                 $con->query($insert);
             };
         ?>
@@ -58,31 +57,25 @@
                                                     <input name="pname" class="form-control" type="text" placeholder="Full Name" required>
                                                 </div>
                                                 <div class="col-sm-6 form-group">
-                                                    <label>Party Type : </label>
-                                                    <input name="ptype" class="form-control" type="text" placeholder="Party Type">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6 form-group">
                                                     <label>Phone : </label>
                                                     <input name="phone" class="form-control" type="text" placeholder="Phone Number">
                                                 </div>
+                                            </div>
+                                            <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                     <label>Email : </label>
                                                     <input name="email" class="form-control" type="email" placeholder="Email">
                                                 </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                     <label>Address :</label>
                                                     <textarea name="address" class="form-control" id="address" cols="10" rows="2" placeholder="Address"></textarea>
                                                 </div>
+                                            </div>
+                                            <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                     <label>Contact Persone :</label>
                                                     <input name="conpersone" class="form-control" type="text" placeholder="Contact Persone">
                                                 </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="col-sm-6 form-group">
                                                     <label>Contact Persone Phone :</label>
                                                     <input name="cpphone" class="form-control" type="text" placeholder="Contact Persone Phone">

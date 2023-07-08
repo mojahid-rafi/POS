@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Admincast bootstrap 4 &amp; angular 5 admin template, Шаблон админки | Login</title>
+    <title>Point Of Sale | Login</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -19,7 +19,7 @@
 <body class="bg-silver-300">
     <div class="content">
         <div class="brand">
-            <a class="link" href="index.html">POS</a>
+            <a class="link" href="./login.php">POS</a>
         </div>
         <form id="login-form" action="javascript:;" method="post">
             <h2 class="login-title">Log in</h2>
@@ -39,7 +39,7 @@
                 <label class="ui-checkbox ui-checkbox-info">
                     <input type="checkbox">
                     <span class="input-span"></span>Remember me</label>
-                <a href="forgot_password.html">Forgot password?</a>
+                <a href="javascript:;">Forgot password?</a>
             </div>
             <div class="form-group">
                 <button class="btn btn-info btn-block" type="submit">Login</button>

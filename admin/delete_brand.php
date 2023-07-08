@@ -6,6 +6,6 @@
     
         $con->query($delete);
         
-        header("Location: http://localhost/R55/POS/admin/brand.php");
+        header("Location:brand.php");
 
 ?>

@@ -6,6 +6,6 @@
 
     $con->query($delete);
     
-    header("Location: http://localhost/R55/POS/admin/supplier_form.php");
+    header("Location:supplier_form.php");
 
     ?>

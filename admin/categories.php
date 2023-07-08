@@ -20,67 +20,57 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="ibox">
-        <!-- modal button -->
-        <div class="ibox-head justify-content-end">
-        <?php
-            if (isset($_POST['submit'])){
-                $cat_name = $_POST['cat_name'];
-                $dis = $_POST['dis'];
-  
-                $insert = "INSERT INTO `categories`(`name`, `discription`,`user_id`) VALUES ('{$cat_name}','{$dis}','0')";
-                $con->query($insert);
+                    <!-- modal button -->
+                        <div class="ibox-head justify-content-end">
+                        <?php
+                            if (isset($_POST['submit'])){
+                                $cat_name = $_POST['cat_name'];
+                                $dis = $_POST['dis'];
+                            
+                                $insert = "INSERT INTO `categories`(`name`, `discription`,`user_id`) VALUES ('{$cat_name}','{$dis}',                '0')";
+                                $con->query($insert);
+                            };
+                            ?>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
+                                Add Catagories
+                            </button>
+                        </div>
+                     <!-- modal button end -->
 
-            };
-            ?>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
-                Add Catagories
-            </button>
-        </div>
-        <!-- modal button end -->
-
-        <!-- modal start -->
-        <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd" aria-hidden="true">
+                    <!-- modal start -->
+                        <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd"                aria-hidden="true">
                               <form action="" method="POST">
                                   <div class="modal-dialog modal-lg" role="document">
                                       <div class="modal-content">
                                           <div class="modal-header">
                                               <h5 class="modal-title" id="exampleModalLabel">Supplier</h5>
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <button type="button" class="close" data-dismiss="modaria-label="Close">
                                                   <span aria-hidden="true">&times;</span>
                                               </button>
                                           </div>
                                           <div class="modal-body">
-										  
-										  <!--form body start here-->
-										  
-										  
-										  
-                                    <div class="row">
-                                        <div class="col-sm-12 form-group">
-                                            <label>Catagory Name : </label>
-                                            <input name="cat_name" class="form-control" type="text" placeholder="Catagory Name">
-                                            <label>Discription : </label>
-                                            <textarea name="dis" class="form-control" id="" cols="2" rows="2" placeholder="Discription"></textarea>
                                         
-                                        </div>
+		                				  <!--form body start here-->
                                         
-                                    </div>
-                                    
-
-											<!--form body end -->
-											
-											
+                                                <div class="row">
+                                                    <div class="col-sm-12 form-group">
+                                                        <label>Catagory Name : </label>
+                                                        <input name="cat_name" class="form-control" type="teplaceholder="Catagory               Name">
+                                                        <label>Discription : </label>
+                                                        <textarea name="dis" class="form-control" id="" cols="2"                rows=placeholder="Discription"></textarea>
+                                                    </div>  
+                                                </div>
+		                					<!--form body end -->
+                                        
                                           </div>
                                           <div class="modal-footer">
-<!--                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                                              <button name="submit" class="btn btn-default px-4" type="submit">Save</button>
+                                              <button name="submit" class="btn btn-default px-4" type="submit">Sabutton>
                                           </div>
                                       </div>
                                   </div>
-                              </form>
-                              
-                          </div>
+                              </form>               
+                            </div>
         <!-- modal end -->
 
         <?php 
@@ -89,42 +79,36 @@
             $result = $query->fetch_all(MYSQLI_ASSOC);
         ?>
 
-
-
         <div class="ibox-body">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
 
-                                <tr>
-                                    <th width="50px">SL</th>
-                                    <th>Catagory Name</th>
-                                    <th>Discription</th>
-                                    
-                                </tr>
+                                    <tr>
+                                        <th width="50px">SL</th>
+                                        <th>Catagory Name</th>
+                                        <th>Discription</th>
+
+                                    </tr>
                                 </thead>
                                 <tbody>
 
                                 <?php foreach($result as $value): ?>
-                            <tr>
-                                <td><?= $value['id']; ?></td>
-                                <td><?= $value['name']; ?></td>
-                                <td><?= $value['discription']; ?></td>
+                                    <tr>
+                                        <td><?= $value['id']; ?></td>
+                                        <td><?= $value['name']; ?></td>
+                                        <td><?= $value['discription']; ?></td>
 
-                                <td> 
-                                    <a href="edit_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
+                                        <td> 
+                                            <a href="edit_categories.php?id=<?= $value['id']; ?>" class="btn btn-default        btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
 
-                                 <a href="delete_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-
-            
+                                         <a href="delete_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs      m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
-
-
                     </div>        
                 </div>
             </div>

@@ -6,6 +6,6 @@
     
         $con->query($delete);
         
-        header("Location: http://localhost/R55/POS/admin/categories.php");
+        header("Location:categories.php");
 
 ?>

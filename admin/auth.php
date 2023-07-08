@@ -16,7 +16,7 @@
         $result = $con->query($qry);
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            // $_SESSION['user_name'] = $row['display_name'];
+             $_SESSION['user_name'] = $row['display_name'];
             header("location:dashboard.php");
         }
         else

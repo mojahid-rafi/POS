@@ -55,13 +55,14 @@
                 <li class="dropdown dropdown-user">
                     <a class="nav-link dropdown-toggle link" data-toggle="dropdown">
                         <img src="./assets/img/admin-avatar.png"/>
-                        <span></span>Admin<i class="fa fa-angle-down m-l-5"></i></a>
+                        <span></span> <?php if (isset($_SESSION['user_name'])) { echo $_SESSION['user_name']; } ?>
+                        <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Profile</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-cog"></i>Settings</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-support"></i>Support</a>
                         <li class="dropdown-divider"></li>
-                        <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                        <a class="dropdown-item" href="./src/logout.php"><i class="fa fa-power-off"></i>Logout</a>
                     </ul>
                 </li>
             </ul>
@@ -77,8 +78,17 @@
                     <img src="./assets/img/admin-avatar.png" width="45px"/>
                 </div>
                 <div class="admin-info">
-                    <div class="font-strong">Team Error</div>
-                    <small>Administrator</small>
+                    <div class="font-strong">
+                        <?php if (isset($_SESSION['user_name'])) { echo $_SESSION['user_name']; } ?>
+                    </div>
+                    <small>
+                        <?php
+                        if (isset($_SESSION['user_name']))
+                        {
+                            echo "Administrator";
+                        }
+                        ?>
+                    </small>
                 </div>
             </div>
             <ul class="side-menu metismenu">

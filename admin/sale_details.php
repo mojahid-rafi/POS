@@ -32,7 +32,7 @@
                                                     $query = $con->query($select);
                                                     $result = $query->fetch_all(MYSQLI_ASSOC);
                                                         foreach($result as $value): ?>
-                                                            <option value="<?= $value['id']; ?>"><?= $valu['party_name']; ?></option>
+                                                            <option value="<?= $value['id']; ?>"><?= $value['party_name']; ?></option>
                                                         <?php endforeach; ?>
                                                 </select>
                                         </div>

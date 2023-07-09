@@ -30,7 +30,7 @@
 
 
 
-        <form action="update_sale_details.php" method="POST">
+        <form action="update_sales.php" method="POST">
         <input type="text" name="id" hidden value="<?php echo $fetch['id'];  ?>" >
                                   <div class="modal-dialog modal-lg" role="document">
                                       <div class="modal-content">

@@ -135,7 +135,7 @@
                         <span class="nav-label">Purchase</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./sale_details.php">Purchase Entry</a>
+                            <a href="add_sale.php">Purchase Entry</a>
                         </li>
                         <li>
                             <a href="./pos/pos.php">Purchase List</a>
@@ -148,7 +148,7 @@
                         <span class="nav-label">Sale</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./sale_details.php">Sales Entry</a>
+                            <a href="add_sale.php">Sales Entry</a>
                         </li>
                         <li>
                             <a href="./pos/pos.php">POS</a>

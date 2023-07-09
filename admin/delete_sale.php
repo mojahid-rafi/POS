@@ -8,6 +8,6 @@
 
     $con->query($delete);
     
-    header("Location: http://localhost/R55/POS/admin/sale_details.php");
+    header("Location: http://localhost/R55/POS/admin/add_sale.php");
 
     ?>

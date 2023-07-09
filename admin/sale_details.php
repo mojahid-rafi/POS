@@ -18,32 +18,31 @@
         <div class="page-content">
             <div class="col-md-12">
                 <div class="ibox">
-                    <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd"aria-hidden="true">
-                        <form action="" method="POST">
+                    <div class="ibox-body">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label class="">Select Customer</label>
+                                <select name="party_id" class="form-control select2_style1"style="width: 100%;">
+                                    <option disabled selected value="0">Select Customer</option>
+                                    <?php
+                                    $select = "SELECT * FROM customers";
+                                    $query = $con->query($select);
+                                    $result = $query->fetch_all(MYSQLI_ASSOC);
+                                    foreach($result as $value): ?>
+                                        <option value="<?= $value['id']; ?>"><?= $value['party_name']; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
-                                <div class="ibox-body">
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <label class="">Select Customer</label>
-                                                <select name="brand_id" class="form-control select2_style1"style="width: 100%;">
-                                                <option disabled selected value="0">Select Custoemr</option>
-                                                <?php 
-                                                    $select = "SELECT * FROM customers";
-                                                    $query = $con->query($select);
-                                                    $result = $query->fetch_all(MYSQLI_ASSOC);
-                                                        foreach($result as $value): ?>
-                                                            <option value="<?= $value['id']; ?>"><?= $value['party_name']; ?></option>
-                                                        <?php endforeach; ?>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-6 form-group">
-                                            <label>Sale Date : </label>
-                                            <input name="sale_date" class="form-control" type="date"placeholder="dd/mm/yyyy">
-                                        </div>
-                                    </div>
+                            <div class="col-sm-6 form-group" id="date_1">
+                                <label class="font-normal">Sale Date</label>
+                                <div class="input-group date">
+                                    <span class="input-group-addon bg-white"><i class="fa fa-calendar"></i></span>
+                                    <input class="form-control" type="text" value="04/12/2017">
                                 </div>
-                        </form>
-                </div>                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -54,23 +53,30 @@
                         <form action="" method="get">
                             <div class="row">
                                 <div class="col-sm-8 form-group">
-                                    <input name="email" id="productname" name='productname' class="form-control" type="search" placeholder="">
+                                    <div class="input-group">
+                                        <div class="input-group-addon bg-white">
+                                            <i class="fa fa-search-plus"></i>
+                                        </div>
+                                        <input class="form-control" id="productname" name='productname' type="text" placeholder="input group">
+                                        <div class="input-group-addon bg-white">
+                                            <input type="submit" value="Add" class="btn btn-group-justified">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
 
                         <div class="row">
                             <div class="col-sm-12 form-group">
-                                <table class="table">
+                                <table class="table" id="product_table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Product</th>
+                                        <th scope="col">Item Name</th>
                                         <th scope="col">Unit price</th>
+                                        <th scope="col">Unit</th>
                                         <th scope="col">Quantity</th>
-                                        <th scope="col">Discount</th>
-                                        <th scope="col">Tax</th>
-                                        <th scope="col">Price inc.tax</th>
-                                        <th scope="col">Subtotal</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                     </thead>
                                     <tbody id="dyn_tr">
@@ -79,7 +85,7 @@
                             </div>
                         </div>
                     <div>
-                </div>               
+                </div>
             </div>
         </div>
     </div>
@@ -138,7 +144,7 @@
 
                     function addProduct(id) {
                         $.ajax({
-                            url: 'add_product.php',
+                            url: 'src/ajax/add_product.php',
                             type: 'post',
                             data: {
                                 id: id
@@ -146,7 +152,6 @@
                             success: function(response) {
                                 //console.log(response);
                                 response = JSON.parse(response);
-                                //console.log(response);
                                 $html = '<tr>';
                                 $html += '<td class="pid d-none">' + response.id + '</td>';
                                 $html += '<td>' + response.name + '</td>';

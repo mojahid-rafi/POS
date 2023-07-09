@@ -62,7 +62,7 @@
                                             <div class="input-group-addon bg-white">
                                                 <i class="fa fa-search-plus"></i>
                                             </div>
-                                            <input class="form-control" id="productname" name='productname' type="text" placeholder="input group">
+                                            <input class="form-control" id="productname" name='productname' type="text" placeholder="Search Item (Item Name / Barcode)">
                                             <div class="input-group-addon bg-white p-0">
                                                 <a href="javascript:void;" class="btn btn-success">Add</a>
                                             </div>

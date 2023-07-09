@@ -83,7 +83,7 @@
             <div class="col-lg-4">
                 <div class="ibox">
                     <div class="ibox-head">
-                        <div class="ibox-title">Blood Group Wise Donor</div>
+                        <div class="ibox-title">Top 10 Customers</div>
                     </div>
                     <div class="ibox-body">
                         <div class="row align-items-center">
@@ -92,28 +92,28 @@
                             </div>
                         </div>
                         <ul class="list-group list-group-divider list-group-full">
-                            <li class="list-group-item">A Positive (A+) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-up"></i> 24%</span>
                             </li>
-                            <li class="list-group-item">A Negative (A-) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-up"></i> 12%</span>
                             </li>
-                            <li class="list-group-item">B Positive (B+) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-down"></i> 4%</span>
                             </li>
-                            <li class="list-group-item">B Negative (B-) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-down"></i> 4%</span>
                             </li>
-                            <li class="list-group-item">O Positive (O+) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-down"></i> 4%</span>
                             </li>
-                            <li class="list-group-item">O  Negative (O-) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-down"></i> 4%</span>
                             </li>
-                            <li class="list-group-item">AB Positive (AB+) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-down"></i> 4%</span>
                             </li>
-                            <li class="list-group-item">AB Negative (AB-) :
+                            <li class="list-group-item">Customer Name :
                                 <span class="float-right"><i class="fa fa-caret-down"></i> 4%</span>
                             </li>
                         </ul>

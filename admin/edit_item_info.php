@@ -45,9 +45,9 @@
                             <div class="col-sm-6 form-group">
 
                                 <?php
-                                    $cat_id= $fetch['category_id'];
+                                    $cat_id= $fetch['category_id'];            
 
-                                    $select = "SELECT * FROM categories WHERE id=$cat_id";
+                                    $select = "SELECT * FROM categories WHERE id='{$cat_id}'";
                                     $query = $con->query($select);
                                     $result = $query->fetch_all(MYSQLI_ASSOC);
                                 ?>

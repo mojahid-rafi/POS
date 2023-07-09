@@ -4,13 +4,13 @@
     <div class="content-wrapper">
     <!-- START PAGE CONTENT-->
     <div class="page-heading">
-        <h1 class="page-title">Item Info</h1>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="dashboard.php"><i class="la la-home font-20"></i></a>
-            </li>
-            <!-- <li class="breadcrumb-item"></li>-->
-        </ol>
+<!--        <h1 class="page-title">Item Info</h1>-->
+<!--        <ol class="breadcrumb">-->
+<!--            <li class="breadcrumb-item">-->
+<!--                <a href="dashboard.php"><i class="la la-home font-20"></i></a>-->
+<!--            </li>-->
+<!--             <li class="breadcrumb-item"></li>-->
+<!--        </ol>-->
     </div>
 
     <!--    Enter Your Content Here-->
@@ -39,14 +39,15 @@ if (isset($_POST['submit'])){
     <div class="row">
     <div class="col-md-12">
         <div class="ibox">
-            <!-- modal button -->
-            <div class="ibox-head justify-content-end">
-                <!-- Button trigger modal -->
+            <div class="ibox-head">
+                <div class="ibox-title">Item Information</div>
+
+                <!-- modal button -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
                     Add Item
                 </button>
+                <!-- modal button end -->
             </div>
-            <!-- modal button end -->
 
             <!-- modal start -->
     <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd" aria-hidden="true">

@@ -6,13 +6,13 @@
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
-            <h1 class="page-title">Categories</h1>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>
-                </li>
-               <!-- <li class="breadcrumb-item"></li>-->
-            </ol>
+<!--            <h1 class="page-title">Categories</h1>-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li class="breadcrumb-item">-->
+<!--                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>-->
+<!--                </li>-->
+<!--                <li class="breadcrumb-item"></li>-->
+<!--            </ol>-->
         </div>
 
         <!--    Enter Your Content Here-->
@@ -20,23 +20,22 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="ibox">
-                    <!-- modal button -->
-                        <div class="ibox-head justify-content-end">
-                        <?php
-                            if (isset($_POST['submit'])){
-                                $cat_name = $_POST['cat_name'];
-                                $dis = $_POST['dis'];
-                            
-                                $insert = "INSERT INTO `categories`(`name`, `discription`,`user_id`) VALUES ('{$cat_name}','{$dis}',                '0')";
-                                $con->query($insert);
-                            };
-                            ?>
-                            <!-- Button trigger modal -->
+                        <div class="ibox-head">
+                            <div class="ibox-title">Category Information</div>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
                                 Add Catagories
                             </button>
                         </div>
-                     <!-- modal button end -->
+
+                        <?php
+                            if (isset($_POST['submit'])){
+                                $cat_name = $_POST['cat_name'];
+                                $dis = $_POST['dis'];
+
+                                $insert = "INSERT INTO `categories`(`name`, `discription`,`user_id`) VALUES ('{$cat_name}','{$dis}',                '0')";
+                                $con->query($insert);
+                            };
+                        ?>
 
                     <!-- modal start -->
                         <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd"                aria-hidden="true">

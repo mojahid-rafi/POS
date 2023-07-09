@@ -174,7 +174,7 @@
                         <span class="nav-label">Settings</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./customer.php">Company Information</a>
+                            <a href="./company.php">Company Information</a>
                         </li>
                         <li>
                             <a href="./Supplier_form.php">Localization</a>

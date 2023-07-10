@@ -189,9 +189,6 @@
                                 $('#adrs').html("Address : "+response.address);
                                 $('#phone').html("Phone : "+response.phone);
                                 $('#email').html("Email: "+response.email);
-
-                                // $('#cs_info').append($html);
-
                             }
                         });
                     }

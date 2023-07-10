@@ -15,6 +15,6 @@ if (isset($_POST['submit'])) {
     $con->query($update);
 }
 
-header("Location: http://localhost/R55/POS/admin/supplier_form.php");
+header("Location: http://localhost/R55/POS/admin/supplier.php");
 exit;
 ?>

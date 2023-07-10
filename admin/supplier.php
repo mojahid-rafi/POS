@@ -108,24 +108,24 @@
                 ?>
 
                     <div class="ibox-body">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
+                        <table class="table table-striped table-bordered table-hover" id="example-table" cellspacing="0" width="100%">
+                            <thead>
 
-                                <tr>
-                                    <th width="50px">SL</th>
-                                    <th>Party Name</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Contact Person</th>
-                                    <th>Contact Person Phone</th>
+                            <tr>
+                                <th width="50px">SL</th>
+                                <th>Party Name</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Contact Person</th>
+                                <th>CP Phone</th>
+                                <th>Action</th>
 
-                                </tr>
-                                </thead>
-                                <tbody>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-                                <?php foreach($result as $value): ?>
+                            <?php foreach($result as $value): ?>
                                 <tr>
                                     <td><?= $value['id']; ?></td>
                                     <td><?= $value['party_name']; ?></td>
@@ -135,16 +135,15 @@
                                     <td><?= $value['contact_person']; ?></td>
                                     <td><?= $value['cp_phone']; ?></td>
 
-                                    <td> 
-                                    <a href="editsupplier.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
+                                    <td>
+                                        <a href="editsupplier.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
 
-                                    <a href="delete_supplier.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                        <a href="delete_supplier.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs m-r-5"><i class="fa fa-trash font-14"></i></a>
                                     </td>
                                 </tr>
-                                <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
                     </div>
 
                     </div>        
@@ -153,3 +152,12 @@
  
     
 <?php include ("./footer.php"); ?>
+
+            <!-- PAGE LEVEL SCRIPTS-->
+            <script type="text/javascript">
+                $(function() {
+                    $('#example-table').DataTable({
+                        pageLength: 10,
+                    });
+                })
+            </script>

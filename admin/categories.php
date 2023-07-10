@@ -37,7 +37,7 @@
                             };
                         ?>
 
-                    <!-- modal start -->
+                        <!-- modal start -->
                         <div class="modal fade" id="DonorAdd" tabindex="-1" role="dialog" aria-labelledby="DonorAdd"                aria-hidden="true">
                               <form action="" method="POST">
                                   <div class="modal-dialog modal-lg" role="document">
@@ -49,9 +49,7 @@
                                               </button>
                                           </div>
                                           <div class="modal-body">
-                                        
 		                				  <!--form body start here-->
-                                        
                                                 <div class="row">
                                                     <div class="col-sm-12 form-group">
                                                         <label>Catagory Name : </label>
@@ -61,7 +59,6 @@
                                                     </div>  
                                                 </div>
 		                					<!--form body end -->
-                                        
                                           </div>
                                           <div class="modal-footer">
                                             <input name="submit" class="btn btn-default px-4" type="submit">
@@ -70,47 +67,53 @@
                                   </div>
                               </form>               
                             </div>
-        <!-- modal end -->
+                            <!-- modal end -->
 
-        <?php 
-            $select = 'SELECT * FROM categories';
-            $query = $con->query($select);
-            $result = $query->fetch_all(MYSQLI_ASSOC);
-        ?>
+                        <?php
+                            $select = 'SELECT * FROM categories';
+                            $query = $con->query($select);
+                            $result = $query->fetch_all(MYSQLI_ASSOC);
+                        ?>
 
-        <div class="ibox-body">
-                        <div class="table-responsive">
-                            <table class="table">
+                        <div class="ibox-body">
+                            <table class="table table-striped table-bordered table-hover" id="example-table" cellspacing="0" width="100%">
                                 <thead>
-
                                     <tr>
                                         <th width="50px">SL</th>
-                                        <th>Catagory Name</th>
-                                        <th>Discription</th>
-
+                                        <th>Category Name</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($result as $value): ?>
+                                        <tr>
+                                            <td><?= $value['id']; ?></td>
+                                            <td><?= $value['name']; ?></td>
+                                            <td><?= $value['discription']; ?></td>
 
-                                <?php foreach($result as $value): ?>
-                                    <tr>
-                                        <td><?= $value['id']; ?></td>
-                                        <td><?= $value['name']; ?></td>
-                                        <td><?= $value['discription']; ?></td>
+                                            <td>
+                                                <a href="edit_categories.php?id=<?= $value['id']; ?>" class="btn btn-default        btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
 
-                                        <td> 
-                                            <a href="edit_categories.php?id=<?= $value['id']; ?>" class="btn btn-default        btn-xs m-r-5"><i class="fa fa-pencil font-14"></i></a>
-
-                                         <a href="delete_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs      m-r-5"><i class="fa fa-trash font-14"></i></a>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
+                                                <a href="delete_categories.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs      m-r-5"><i class="fa fa-trash font-14"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
-                    </div>        
+                    </div>
                 </div>
             </div>
-        </div>
     
 <?php include ("./footer.php"); ?>
+
+
+            <!-- PAGE LEVEL SCRIPTS-->
+            <script type="text/javascript">
+                $(function() {
+                    $('#example-table').DataTable({
+                        pageLength: 10,
+                    });
+                })
+            </script>

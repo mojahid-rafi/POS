@@ -154,6 +154,7 @@
 <script src="./assets/vendors/jvectormap/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
 <script src="./assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
 <script src="./assets/vendors/jvectormap/jquery-jvectormap-us-aea-en.js" type="text/javascript"></script>
+<script src="./assets/vendors/DataTables/datatables.min.js" type="text/javascript"></script>
 
 <script src="./assets/vendors/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
 <script src="./assets/vendors/jquery-knob/dist/jquery.knob.min.js" type="text/javascript"></script>

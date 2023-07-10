@@ -18,8 +18,9 @@
     <link href="./assets/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet"/>
     <link href="./assets/vendors/jquery-minicolors/jquery.minicolors.css" rel="stylesheet"/>
     <!-- THEME STYLES-->
-    <link href="assets/css/main.min.css" rel="stylesheet"/>
+    <link href="./assets/css/main.min.css" rel="stylesheet"/>
     <!-- PAGE LEVEL STYLES-->
+    <link href="./assets/vendors/DataTables/datatables.min.css" rel="stylesheet" />
 
 </head>
 
@@ -28,7 +29,7 @@
     <!-- START HEADER-->
     <header class="header">
         <div class="page-brand">
-            <a class="link" href="index.html">
+            <a class="link" href="./dashboard.php">
                     <span class="brand">JogBiog
 <!--                        <span class="brand-tip">Management</span>-->
                     </span>
@@ -125,7 +126,7 @@
                             <a href="./customer.php">Customers</a>
                         </li>
                         <li>
-                            <a href="./Supplier_form.php">Suppliers</a>
+                            <a href="supplier.php">Suppliers</a>
                         </li>
 
                     </ul>

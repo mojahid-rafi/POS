@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-sm-6 form-group">
                                     <label class="">Select Customer</label>
-                                    <select name="party_id" class="form-control select2_style1"style="width: 100%;">
+                                    <select name="party_id" id="party_id" class="form-control select2_style1"style="width: 100%;">
                                         <option disabled selected value="0">Select Customer</option>
                                         <?php
                                         $select = "SELECT * FROM customers";
@@ -42,6 +42,29 @@
                                     <div class="input-group date">
                                         <span class="input-group-addon bg-white"><i class="fa fa-calendar"></i></span>
                                         <input class="form-control" type="text" value="04/12/2017">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div id="cs_info">
+                                        <div class="m-b-5 font-bold">Customer Information</div>
+                                        <div id="cs_name">
+
+                                        </div>
+
+                                        <div class="m-b-5 font-bold mt-3">Shipping Information</div>
+                                        <ul class="list-unstyled">
+                                            <li class="m-b-5"
+                                                <span class="font-strong" id="adrs"></span>
+                                            </li>
+                                            <li class="m-b-5">
+                                                <span id="phone"></span>
+                                            </li>
+                                            <li>
+                                                <span id="email"></span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -146,6 +169,32 @@
                             addProduct(id);
                         }
                     });
+
+                    $("#party_id").change(function(){
+                        GetCustomerInfo($(this).val());
+                    });
+
+
+                    function GetCustomerInfo(id) {
+                        $.ajax({
+                            url: 'src/ajax/get_customer_info.php',
+                            type: 'post',
+                            data: {
+                                id: id
+                            },
+                            success: function(response) {
+                                // console.log(response);
+                                response = JSON.parse(response);
+                                $('#cs_name').html("<b>ID :</b> " + response.id + " <b>Name :</b> "+ response.name);
+                                $('#adrs').html("Address : "+response.address);
+                                $('#phone').html("Phone : "+response.phone);
+                                $('#email').html("Email: "+response.email);
+
+                                // $('#cs_info').append($html);
+
+                            }
+                        });
+                    }
 
                     function addProduct(id) {
                         $.ajax({

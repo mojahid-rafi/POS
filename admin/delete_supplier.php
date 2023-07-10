@@ -6,6 +6,6 @@
 
     $con->query($delete);
     
-    header("Location:supplier_form.php");
+    header("Location:supplier.php");
 
     ?>

@@ -1,20 +1,7 @@
 <?php include ("./header.php"); ?>
 <?php require ("./src/database.php"); ?>
 
-<?php
-            if (isset($_POST['submit'])){
-                $pname = $_POST['pname'];
-                $phone = $_POST['phone'];
-                $email = $_POST['email'];
-                $address = $_POST['address'];
-                $conpersone = $_POST['conpersone'];
-                $cpphone = $_POST['cpphone'];
 
-                $insert = "INSERT INTO `suppliers`(`party_name`, `party_type`, `address_ar`, `phone`, `email`,`contact_person`, `cp_phone`, `user_id`) VALUES ('{$pname}', 'customer', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}', '0')";
-                $con->query($insert);
-
-};
-?>
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
@@ -32,6 +19,21 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="ibox">
+
+                    <?php
+            if (isset($_POST['submit'])){
+                $pname = $_POST['pname'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                $conpersone = $_POST['conpersone'];
+                $cpphone = $_POST['cpphone'];
+
+                $insert = "INSERT INTO `suppliers`(`party_name`, `party_type`, `address_ar`, `phone`, `email`,`contact_person`, `cp_phone`, `user_id`) VALUES ('{$pname}', 'customer', '{$address}', '{$phone}', '{$email}', '{$conpersone}', '{$cpphone}', '0')";
+                $con->query($insert);
+
+};
+?>
                     <!-- modal button -->
                     <div class="ibox-head justify-content-end">
                         <!-- Button trigger modal -->
@@ -148,6 +150,6 @@
                     </div>        
                 </div>
             </div>
-        </div>
+ 
     
 <?php include ("./footer.php"); ?>

@@ -64,7 +64,7 @@
                                         
                                           </div>
                                           <div class="modal-footer">
-                                              <button name="submit" class="btn btn-default px-4" type="submit">Sabutton>
+                                            <input name="submit" class="btn btn-default px-4" type="submit">
                                           </div>
                                       </div>
                                   </div>

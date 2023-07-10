@@ -152,12 +152,11 @@ CREATE TABLE brands(
 CREATE TABLE company(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     comname VARCHAR(50) not null DEFAULT '',
-    comlogo VARCHAR(255) not null DEFAULT '',
     address VARCHAR(100) not null DEFAULT '',
     comweb VARCHAR(30) not null DEFAULT '',
     phone VARCHAR(15) not null DEFAULT '',
     email VARCHAR(30) not null DEFAULT '',
-    fax VARCHAR(20) not null DEFAULT '',
+    image VARCHAR(255) not null DEFAULT '',
     rheader VARCHAR(50) not null DEFAULT '',
     rpolicy VARCHAR(250) not null DEFAULT '',
 	user_id VARCHAR(30) not null DEFAULT '',

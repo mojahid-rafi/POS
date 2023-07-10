@@ -4,13 +4,13 @@
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
-            <h1 class="page-title">Sale Details</h1>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>
-                </li>
-               <!-- <li class="breadcrumb-item"></li>-->
-            </ol>
+<!--            <h1 class="page-title">Sale Details</h1>-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li class="breadcrumb-item">-->
+<!--                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>-->
+<!--                </li>-->
+<!--                <li class="breadcrumb-item"></li>-->
+<!--            </ol>-->
         </div>
 
         <!--    Enter Your Content Here-->
@@ -95,7 +95,12 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="ibox">
+                    <div class="ibox" style="border-top-left-radius: 7px;border-top-right-radius: 7px;">
+                        <div class="ibox-head" style="border-top-left-radius: 7px;border-top-right-radius: 7px; background: #08193e;">
+                            <div class="ibox-title text-white">
+                                Order Summary
+                            </div>
+                        </div>
                         <div class="ibox-body">
                             <div class="offset-1 col-sm-12 form-group">
                                 <label>Sub Total </label>

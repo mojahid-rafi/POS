@@ -20,7 +20,7 @@
                 <div class="ibox bg-success color-white widget-stat">
                     <div class="ibox-body">
                         <h2 class="m-b-5 font-strong">10</h2>
-                        <div class="m-b-5">Blood Request</div><i class="ti-shopping-cart widget-stat-icon"></i>
+                        <div class="m-b-5">Today's Sale</div><i class="ti-shopping-cart widget-stat-icon"></i>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 <div class="ibox bg-info color-white widget-stat">
                     <div class="ibox-body">
                         <h2 class="m-b-5 font-strong">25</h2>
-                        <div class="m-b-5">New Donor</div><i class="ti-bar-chart widget-stat-icon"></i>
+                        <div class="m-b-5">Today's Purchase</div><i class="ti-bar-chart widget-stat-icon"></i>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div class="ibox bg-warning color-white widget-stat">
                     <div class="ibox-body">
                         <h2 class="m-b-5 font-strong">1570</h2>
-                        <div class="m-b-5">Total Donor</div><i class="fa fa-heart widget-stat-icon"></i>
+                        <div class="m-b-5">Payment Receive</div><i class="fa fa-heart widget-stat-icon"></i>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="ibox bg-danger color-white widget-stat">
                     <div class="ibox-body">
                         <h2 class="m-b-5 font-strong">3</h2>
-                        <div class="m-b-5">Campaign Request</div><i class="ti-user widget-stat-icon"></i>
+                        <div class="m-b-5">Today's Expense</div><i class="ti-user widget-stat-icon"></i>
                     </div>
                 </div>
             </div>

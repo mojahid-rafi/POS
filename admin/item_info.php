@@ -159,7 +159,8 @@ if (isset($_POST['submit'])){
     </div>
             <!-- modal end -->
             <?php
-            $select = 'SELECT * FROM item_info';
+            $select = 'SELECT i.id, i.item_name, i.item_code, c.name as CatName, b.name as BrandName, i.unit, i.unit_price, i.rol, i.last_pur_price, i.barcode, i.sts FROM `item_info` i, categories c, brands b
+WHERE i.category_id = c.id and i.brand_id = b.id;';
             $query = $con->query($select);
             $result = $query->fetch_all(MYSQLI_ASSOC);
             ?>
@@ -169,7 +170,7 @@ if (isset($_POST['submit'])){
                         <thead>
 
                         <tr>
-                            <th width="50px">SL</th>
+                            <th width="50px">ID</th>
                             <th>Item Code</th>
                             <th>Item Name</th>
                             <th>Category</th>
@@ -180,24 +181,29 @@ if (isset($_POST['submit'])){
                             <th>Last Per Price </th>
                             <th>Barcode</th>
                             <th>Status</th>
-                            <th>Stock</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php foreach($result as $value): ?>
                             <tr>
                                 <td><?= $value['id']; ?></td>
-                                <td><?= $value['item_name']; ?></td>
                                 <td><?= $value['item_code']; ?></td>
-                                <td><?= $value['category_id']; ?></td>
-                                <td><?= $value['brand_id']; ?></td>
+                                <td><?= $value['item_name']; ?></td>
+                                <td><?= $value['CatName']; ?></td>
+                                <td><?= $value['BrandName']; ?></td>
                                 <td><?= $value['unit']; ?></td>
                                 <td><?= $value['unit_price']; ?></td>
                                 <td><?= $value['rol']; ?></td>
                                 <td><?= $value['last_pur_price']; ?></td>
                                 <td><?= $value['barcode']; ?></td>
-                                <td><?= $value['sts']; ?></td>
-                                <td><?= $value['op_stock']; ?></td>
+                                <td>
+                                    <?php
+                                    if ($value['sts'] == 1)
+                                    {
+                                        echo "Active";
+                                    } else { echo "Inactive"; } ?>
+                                </td>
                                 <td>
                                     <a href="edit_item_info.php?id=<?= $value['id']; ?>"
                                        class="btn btn-default btn-xs m-r-5">

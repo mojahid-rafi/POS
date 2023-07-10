@@ -4,7 +4,6 @@
     <div class="content-wrapper">
         <!-- START PAGE CONTENT-->
         <div class="page-heading">
-            <h1 class="page-title">Customers</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="dashboard.php"><i class="la la-home font-20"></i></a>
@@ -32,8 +31,9 @@
                 <div class="col-md-12">
                     <div class="ibox">
                         <!-- modal button -->
-                        <div class="ibox-head justify-content-end">
+                        <div class="ibox-head">
                             <!-- Button trigger modal -->
+                            <div class="ibox-title"> Customers</div>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DonorAdd">
                                 Add Customer
                             </button>

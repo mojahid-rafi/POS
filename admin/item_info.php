@@ -159,7 +159,7 @@ if (isset($_POST['submit'])){
     </div>
             <!-- modal end -->
             <?php
-            $select = 'SELECT i.id, i.item_name, i.item_code, c.name as CatName, b.name as BrandName, i.unit, i.unit_price, i.rol, i.last_pur_price, i.barcode, i.sts FROM `item_info` i, categories c, brands b
+            $select = 'SELECT i.id, i.item_name, i.item_code, c.name as CatName, b.name as BrandName, i.unit, i.unit_price, i.rol, i.last_pur_price, i.sts FROM `item_info` i, categories c, brands b
 WHERE i.category_id = c.id and i.brand_id = b.id;';
             $query = $con->query($select);
             $result = $query->fetch_all(MYSQLI_ASSOC);
@@ -177,9 +177,8 @@ WHERE i.category_id = c.id and i.brand_id = b.id;';
                             <th>Brand</th>
                             <th>Unit </th>
                             <th>Unit Price</th>
-                            <th>Re Order Level</th>
-                            <th>Last Per Price </th>
-                            <th>Barcode</th>
+                            <th>ROL</th>
+                            <th>Purchase Price </th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -196,7 +195,6 @@ WHERE i.category_id = c.id and i.brand_id = b.id;';
                                 <td><?= $value['unit_price']; ?></td>
                                 <td><?= $value['rol']; ?></td>
                                 <td><?= $value['last_pur_price']; ?></td>
-                                <td><?= $value['barcode']; ?></td>
                                 <td>
                                     <?php
                                     if ($value['sts'] == 1)

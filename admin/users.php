@@ -123,8 +123,6 @@
                                         <th>Email</th>
                                         <th>Role</th>
                                         <th>Status</th>
-                                        <th>Password</th>
-                                        <th>Confirm Password</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -137,9 +135,14 @@
                                     <td><?= $value['display_name']; ?></td>
                                     <td><?= $value['email']; ?></td>
                                     <td><?= $value['role']; ?></td>
-                                    <td><?= $value['sts']; ?></td>
-                                    <td><?= $value['user_password']; ?></td>
-                                    <td><?= $value['user_con_password']; ?></td>
+                                    <td>
+                                        <?php
+                                            if ($value['sts'] == 1)
+                                            {
+                                            echo "Active";
+                                            } else { echo "Inactive"; }
+                                        ?>
+                                    </td>
                                     <td> 
                                         <a href="edit_users.php?id=<?= $value['id']; ?>" class="btn btn-default btn-xs  m-r-5">
                                             <i class="fa fa-pencil font-14"></i>

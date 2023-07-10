@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2023 at 09:32 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Jul 10, 2023 at 06:40 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -108,18 +108,58 @@ INSERT INTO `categories` (`id`, `name`, `discription`, `user_id`, `create_at`, `
 CREATE TABLE `company` (
   `id` int(11) NOT NULL,
   `comname` varchar(50) NOT NULL DEFAULT '',
-  `comlogo` varchar(255) NOT NULL DEFAULT '',
   `address` varchar(100) NOT NULL DEFAULT '',
   `comweb` varchar(30) NOT NULL DEFAULT '',
   `phone` varchar(15) NOT NULL DEFAULT '',
   `email` varchar(30) NOT NULL DEFAULT '',
-  `fax` varchar(20) NOT NULL DEFAULT '',
+  `image` varchar(255) NOT NULL DEFAULT '',
   `rheader` varchar(50) NOT NULL DEFAULT '',
   `rpolicy` varchar(250) NOT NULL DEFAULT '',
   `user_id` varchar(30) NOT NULL DEFAULT '',
   `create_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `update_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`id`, `comname`, `address`, `comweb`, `phone`, `email`, `image`, `rheader`, `rpolicy`, `user_id`, `create_at`, `update_at`) VALUES
+(1, 'POS solution', 'Mirpur, Dhaka.', 'pos.com', '01755979895', 'pos@gmail.com', '', '', 'Pos', '1', '2023-07-09 18:28:31', NULL),
+(2, 'POS solution', '', 'pos.com', '01755979895', 'pos@gmail.com', '', '', 'Pos', '', '2023-07-09 18:39:28', NULL),
+(3, 'POS solution', '', 'pos.com', '01755979895', 'pos@gmail.com', '', '', 'Pos', '', '2023-07-09 18:40:11', NULL),
+(4, 'Daraz', 'dhaka\r\nmirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '', 'daraz', 'daraz Pos', '', '2023-07-09 20:02:57', NULL),
+(5, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '', 'daraz', 'daraz Pos', '', '2023-07-09 20:04:55', NULL),
+(6, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '', 'daraz', 'daraz Pos', '', '2023-07-09 20:07:51', NULL),
+(7, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '', 'daraz', 'daraz Pos', '', '2023-07-09 20:11:55', NULL),
+(8, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '', 'daraz', 'daraz Pos', '', '2023-07-09 20:18:13', NULL),
+(9, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', 'Array', 'daraz', 'daraz Pos', '', '2023-07-09 20:19:01', NULL),
+(10, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '74410-1688934090.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:21:30', NULL),
+(11, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '59990-1688934319.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:25:19', NULL),
+(12, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '61669-1688934349.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:25:49', NULL),
+(13, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '79591-1688934373.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:26:13', NULL),
+(14, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '65968-1688934581.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:29:41', NULL),
+(15, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '90486-1688934636.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:30:36', NULL),
+(16, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '81297-1688934695.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:31:35', NULL),
+(17, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '90610-1688934861.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:34:21', NULL),
+(18, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '88612-1688934896.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:34:56', NULL),
+(19, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '30276-1688934952.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:35:52', NULL),
+(20, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '62775-1688934968.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:36:08', NULL),
+(21, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '19860-1688935013.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:36:53', NULL),
+(22, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '24012-1688935057.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:37:37', NULL),
+(23, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '55883-1688935068.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:37:48', NULL),
+(24, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '96611-1688935103.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:38:23', NULL),
+(25, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '41504-1688935118.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:38:38', NULL),
+(26, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '51813-1688935136.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:38:56', NULL),
+(27, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '32401-1688935306.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:41:46', NULL),
+(28, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '30387-1688935324.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:42:04', NULL),
+(29, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '46854-1688935340.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:42:20', NULL),
+(30, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '42895-1688935352.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:42:32', NULL),
+(31, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '11458-1688935375.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:42:55', NULL),
+(32, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '84729-1688935390.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:43:10', NULL),
+(33, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '49775-1688935454.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:44:14', NULL),
+(34, 'dating', 'dhaka mirpur', 'daraz.com', '0175522222', 'daraz@gmail.com', '33647-1688935508.png', 'daraz', 'daraz Pos', '', '2023-07-09 20:45:08', NULL),
+(35, 'POS Solution', 'Road-27, Block-D, Mirpur-12, Dhaka.', 'pos-solution.com', '0172222222', 'support@pos-solution.com', '17897-1688963984.png', 'POS Solution', 'Company Policy', '', '2023-07-10 04:39:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -148,14 +188,16 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `party_name`, `party_type`, `address_ar`, `phone`, `email`, `contact_person`, `cp_phone`, `acct_head`, `head_type`, `user_id`, `create_at`, `updated_at`) VALUES
-(1, 'Shoyab', 'customer', 'Dhaka', '01755979896', 'S@gmail.com', 'Rafi', '01599897986', '', '', '', '2023-07-08 06:25:11', NULL),
-(2, 'rafi ', 'Cust', 'mirpur', ' 01755979896', ' R@gmail.com', 'mojahid', '018979896', '', '', '', '2023-07-08 06:25:23', NULL),
-(3, 'Rifat', '', '10 number', '013323216141', 'rifat@gmail.com', 'sakil', '016356973154', '', '', '', '2023-07-08 06:41:31', NULL),
-(4, 'Rifat', '', '10 number', '013323216141', 'rifat@gmail.com', 'sakil', '016356973154', '', '', '', '2023-07-08 06:49:43', NULL),
-(5, 'zahid', '', 'moniram', '019898989', 'z@gmail.com', 'kuddus', '01326589712', '', '', '', '2023-07-08 06:50:45', NULL),
-(6, 'Sho', 'customer', 'janina', '013323216141', 'R@gmail.com', 'sakil', '01599897986', '', '', '', '2023-07-08 06:53:35', NULL),
-(7, 'Sho', 'customer', 'janina', '013323216141', 'R@gmail.com', 'sakil', '01599897986', '', '', '0', '2023-07-08 06:54:35', NULL),
-(8, 'Rifat', 'customer', 'damrai', '013323216141', 'rifat@gmail.com', 'kuddus', '01326589712', '', '', '0', '2023-07-08 06:55:01', NULL);
+(1, 'Shoyab Mahmud ', 'customer', 'Kunjerhut, Bhola.', '01755979896  ', 'S@gmail.com  ', 'Setab', '01599897986  ', '', '', '', '2023-07-08 06:25:11', NULL),
+(2, 'Md Rafi     ', 'Cust', 'Mohammadpur, Dhaka.', ' 017559729896  ', ' R@gmail.com    ', 'Mojahid    ', '01897989600', '', '', '', '2023-07-08 06:25:23', NULL),
+(3, 'Rifat Mia', '', '10 number, Mirpur, Dhaka.', '013323216141 ', 'rifat@gmail.com ', 'Shakil ', '016356973154 ', '', '', '', '2023-07-08 06:41:31', NULL),
+(4, 'Sojib  ', '', 'Block, Mirpur, Dhaka.', '013323216141   ', 'rifat@gmail.com   ', 'Rakib  ', '016356973154   ', '', '', '', '2023-07-08 06:49:43', NULL),
+(5, 'Md Zahid Raz   ', '', 'Moniram, Borhanuddin, Bhoal', '01989888989  ', 'z@gmail.com  ', 'Kuddus  ', '01326589712  ', '', '', '', '2023-07-08 06:50:45', NULL),
+(6, 'Injamam Hossain', 'customer', 'Noakhali.', '013323216141 ', 'hossian@gmail.com ', 'Rakin', '01599897986 ', '', '', '', '2023-07-08 06:53:35', NULL),
+(7, 'Nasir Hossain ', 'customer', 'Rajbari, Dhaka.', '019653216999', 'nasir@gmail.com ', 'Nirob', '01666697777', '', '', '0', '2023-07-08 06:54:35', NULL),
+(8, 'Md Arafat Khan', 'customer', 'Damrai, Dhaka.', '013323218888', 'khan@gmail.com ', 'Usuf', '01326589712 ', '', '', '0', '2023-07-08 06:55:01', NULL),
+(9, 'Sayem Chawdhuri', 'customer', 'ECB, Dhaka.', '01885979855', 'sayem58@gmail.com', 'Johir mahmud', '01700079896', '', '', '0', '2023-07-10 04:00:21', NULL),
+(10, 'Sorifa Begam  ', 'customer', 'Jatrabari, Dhaka.', '01755285476  ', 'sorifa@gmail.com  ', 'Kuddus', '0136568135  ', '', '', '0', '2023-07-10 04:03:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -187,21 +229,21 @@ CREATE TABLE `item_info` (
 --
 
 INSERT INTO `item_info` (`id`, `item_code`, `item_name`, `category_id`, `brand_id`, `unit`, `unit_price`, `rol`, `last_pur_price`, `barcode`, `sts`, `stock_mantain`, `op_stock`, `user_id`, `create_at`, `update_at`) VALUES
-(1, '1001', 'Muri', '20', '2', '1', 100.00, 10, 90.00, '1001', 1, 1, 100.00, '0', '2023-07-09 06:46:50', NULL),
-(2, '1002', 'Meat Masala', '21', '15', '5', 500.00, 25, 450.00, '1002', 1, 1, 120.00, '0', '2023-07-09 06:47:33', NULL),
-(3, '1003', 'Lolipop Ice Cream', '5', '9', '3', 368.00, 15, 320.00, '1003', 1, 1, 150.00, '0', '2023-07-09 06:49:13', NULL),
-(4, '1004', 'Holud Gura', '21', '14', '7', 630.00, 35, 600.00, '1004', 1, 1, 90.00, '0', '2023-07-09 06:50:37', NULL),
-(5, '1005', 'Comfort', '4', '4', '2', 280.00, 35, 250.00, '1005', 1, 1, 120.00, '0', '2023-07-09 06:52:02', NULL),
-(6, '1006', 'Magnum', '5', '9', '4', 490.00, 15, 450.00, '1006', 1, 1, 80.00, '0', '2023-07-09 06:53:29', NULL),
-(7, '1007', 'Mango Drinks', '22', '1', '15', 1500.00, 500, 1400.00, '1007', 1, 1, 1000.00, '0', '2023-07-09 06:56:44', NULL),
-(8, '1008', 'Gold Coffee', '13', '3', '50', 5300.00, 180, 5200.00, '1008', 1, 1, 500.00, '0', '2023-07-09 06:59:20', NULL),
-(9, '1009', 'Seventh Generation', '4', '10', '1', 160.00, 20, 150.00, '1009', 1, 1, 50.00, '0', '2023-07-09 07:01:18', NULL),
-(10, '1010', 'TEER Borhani Mix', '21', '3', '2', 288.00, 35, 220.00, '1010', 1, 1, 100.00, '0', '2023-07-09 07:03:05', NULL),
-(11, '1011', 'Premium Iodized Salt', '16', '7', '3', 360.00, 20, 320.00, '1011', 1, 1, 120.00, '0', '2023-07-09 07:04:13', NULL),
-(12, '1012', 'Iodized Salt', '16', '10', '5', 450.00, 3, 400.00, '1012', 1, 1, 150.00, '0', '2023-07-09 07:05:39', NULL),
-(13, '1013', 'Advanced Soyabean Oil', '15', '2', '1', 290.00, 20, 280.00, '1013', 1, 1, 50.00, '0', '2023-07-09 07:07:05', NULL),
-(14, '1014', 'Fun Butter', '8', '3', '2', 50.00, 15, 50.00, '1014', 1, 1, 100.00, '0', '2023-07-09 07:10:44', NULL),
-(15, '1015', 'Knorr', '2', '4', '1', 222.00, 15, 220.00, '1015', 1, 1, 50.00, '0', '2023-07-09 07:12:20', NULL);
+(1, '1001', 'Muri', '8', '2', 'kg', 100.00, 10, 90.00, '1001', 1, 1, 100.00, '0', '2023-07-09 06:46:50', NULL),
+(2, '1002', 'Meat Masala', '21', '3', 'gm', 500.00, 25, 450.00, '1002', 1, 1, 120.00, '0', '2023-07-09 06:47:33', NULL),
+(3, '1003', 'Lolipop Ice Cream', '5', '5', 'pcs', 368.00, 15, 320.00, '1003', 1, 1, 150.00, '0', '2023-07-09 06:49:13', NULL),
+(4, '1004', 'Holud Gura', '21', '14', 'gm', 630.00, 35, 600.00, '1004', 1, 1, 90.00, '0', '2023-07-09 06:50:37', NULL),
+(5, '1005', 'Comfort', '4', '4', 'pcs', 280.00, 35, 250.00, '1005', 1, 1, 120.00, '0', '2023-07-09 06:52:02', NULL),
+(6, '1006', 'Magnum', '5', '9', 'pcs', 490.00, 15, 450.00, '1006', 1, 1, 80.00, '0', '2023-07-09 06:53:29', NULL),
+(7, '1007', 'Mango Drinks', '22', '1', 'ltr', 1500.00, 500, 1400.00, '1007', 1, 1, 1000.00, '0', '2023-07-09 06:56:44', NULL),
+(8, '1008', 'Gold Coffee', '13', '14', 'pcs', 5300.00, 180, 5200.00, '1008', 1, 1, 500.00, '0', '2023-07-09 06:59:20', NULL),
+(9, '1009', 'Seventh Generation', '2', '4', 'pcs', 160.00, 20, 150.00, '1009', 1, 1, 50.00, '0', '2023-07-09 07:01:18', NULL),
+(10, '1010', 'TEER Borhani Mix', '21', '7', 'gm', 288.00, 35, 220.00, '1010', 1, 1, 100.00, '0', '2023-07-09 07:03:05', NULL),
+(11, '1011', 'Premium Iodized Salt', '16', '15', 'gm', 360.00, 20, 320.00, '1011', 1, 1, 120.00, '0', '2023-07-09 07:04:13', NULL),
+(12, '1012', 'Iodized Salt', '16', '10', 'kg', 450.00, 3, 400.00, '1012', 1, 1, 150.00, '0', '2023-07-09 07:05:39', NULL),
+(13, '1013', 'Advanced Soyabean Oil', '15', '13', 'ltr', 290.00, 20, 280.00, '1013', 1, 1, 50.00, '0', '2023-07-09 07:07:05', NULL),
+(14, '1014', 'Fun Butter', '8', '14', 'pcs', 50.00, 15, 50.00, '1014', 1, 1, 100.00, '0', '2023-07-09 07:10:44', NULL),
+(15, '1015', 'Knorr', '2', '5', 'pcs', 222.00, 15, 220.00, '1015', 1, 1, 50.00, '0', '2023-07-09 07:12:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -413,13 +455,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `item_info`

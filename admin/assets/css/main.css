@@ -90,7 +90,12 @@ pre {
 
 .collapse.in {
   display: block; }
-
+.primary-clr-head {
+  background-color: #08193e;
+  color: #fff !important;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
 .btn {
   -webkit-border-radius: 2px;
   border-radius: 2px;

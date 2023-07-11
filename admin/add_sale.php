@@ -9,20 +9,8 @@ if(!isset($_SESSION['user_name']))
 }
 ?>
 
-<?php include ("./header.php"); ?>
+<?php //include ("./header.php"); ?>
 <?php require ("./src/database.php"); ?>
-
-    <div class="content-wrapper">
-        <!-- START PAGE CONTENT-->
-        <div class="page-heading">
-<!--            <h1 class="page-title">Sale Details</h1>-->
-<!--            <ol class="breadcrumb">-->
-<!--                <li class="breadcrumb-item">-->
-<!--                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>-->
-<!--                </li>-->
-<!--                <li class="breadcrumb-item"></li>-->
-<!--            </ol>-->
-        </div>
 
         <!--    Enter Your Content Here-->
 
@@ -162,7 +150,7 @@ if(!isset($_SESSION['user_name']))
                 </div>
             </div>
     
-<?php include ("./footer.php"); ?>
+<?php //include ("./footer.php"); ?>
 
 
             <script type="text/javascript">

@@ -81,7 +81,7 @@ if (isset($_POST['submit'])){
                                             <option disabled selected value="0">Select Category</option>
                                             <?php
                                                 foreach($result as $value): ?>
-                                                    <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+                                                    <option> value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
@@ -94,7 +94,7 @@ if (isset($_POST['submit'])){
                                             $query = $con->query($select);
                                             $result = $query->fetch_all(MYSQLI_ASSOC);
                                                 foreach($result as $value): ?>
-                                                    <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+                                                    <option  value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
                                                 <?php endforeach; ?>
                                           </select>
                                     </div>

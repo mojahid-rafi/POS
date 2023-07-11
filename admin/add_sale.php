@@ -1,17 +1,16 @@
-<?php include ("./header.php"); ?>
-<?php require ("./src/database.php"); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
-    <div class="content-wrapper">
-        <!-- START PAGE CONTENT-->
-        <div class="page-heading">
-<!--            <h1 class="page-title">Sale Details</h1>-->
-<!--            <ol class="breadcrumb">-->
-<!--                <li class="breadcrumb-item">-->
-<!--                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>-->
-<!--                </li>-->
-<!--                <li class="breadcrumb-item"></li>-->
-<!--            </ol>-->
-        </div>
+if(!isset($_SESSION['user_name']))
+{
+    header("location:login.php");
+}
+?>
+
+<?php //include ("./header.php"); ?>
+<?php require ("./src/database.php"); ?>
 
         <!--    Enter Your Content Here-->
 
@@ -73,7 +72,7 @@
 
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="ibox">
                         <div class="ibox-head">
                             <div class="ibox-title">Add Invoice Items</div>
@@ -118,7 +117,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="ibox" style="border-top-left-radius: 7px;border-top-right-radius: 7px;">
                         <div class="ibox-head" style="border-top-left-radius: 7px;border-top-right-radius: 7px; background: #08193e;">
                             <div class="ibox-title text-white">
@@ -126,32 +125,32 @@
                             </div>
                         </div>
                         <div class="ibox-body">
-                            <div class="offset-1 col-sm-12 form-group">
-                                <label>Sub Total </label>
-                                <p>50,000</p>
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label>Discount </label>
-                                <input name="sale_date" class="form-control" type="text">
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label>Payable </label>
-                                <input name="pay_method" class="form-control" type="text">
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label>Paid </label>
-                                <input name="pay_account" class="form-control" type="text">
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label>Refund </label>
-                                <input name="refund" class="form-control" type="text">
+                            <div class="row">
+                                <div class="col-12">
+                                    <dl class="row">
+                                        <dt class="col-sm-6"><h5 class="m-b-20 m-t-10">Total Amount</h5></dt>
+                                        <dd class="col-sm-6 text-right text-bold"><h5 class="text-secondary m-b-20 m-t-10" id="total">00.00</h5></dd>
+
+                                        <dt class="col-sm-6">Discount</dt>
+                                        <dd class="col-sm-6 text-right" id="discount">00.00</dd>
+
+                                        <dt class="col-sm-6">Payable</dt>
+                                        <dd class="col-sm-6 text-right" id="payable">00.00</dd>
+
+                                        <dt class="col-sm-6">Paid</dt>
+                                        <dd class="col-sm-6 text-right" id="paid">00.00</dd>
+
+                                        <dt class="col-sm-6">Refund</dt>
+                                        <dd class="col-sm-6 text-right" id="refund">00.00</dd>
+                                    </dl>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     
-<?php include ("./footer.php"); ?>
+<?php //include ("./footer.php"); ?>
 
 
             <script type="text/javascript">
@@ -211,11 +210,11 @@
                                 $html += '<td>' + response.sku + '</td>';
                                 $html += '<td><input class="qu" type="number" min="1" name="quantity" value="1"></td>';
                                 $html += '<td class="itemtotal">' + response.price + '</td>';
-                                $html += '<td><a href="#" class="deleteproduct" data-id="' + response.id + '">Delete</a></td>';
+                                $html += '<td><button class="deleteproduct btn btn-danger btn-sm"  data-id="\' + response.id + \'">Delete</button></td>';
                                 $html += '</tr>';
                                 $('#dyn_tr').append($html);
                                 $("#productname").val("").focus();
-                                updateTotal();
+                                calculate();
                             }
                         });
                     }
@@ -224,6 +223,7 @@
                         e.preventDefault();
                         $(this).closest('tr').remove();
                     });
+
                     //update total
                     $(document).on('blur change keyup', '.qu', function() {
                         var $row = $(this).closest('tr');
@@ -232,72 +232,72 @@
                         var itemtotal = qty * price;
                         console.log(itemtotal);
                         $row.find('.itemtotal').text(financial(itemtotal));
-                        updateTotal();
+                        calculate();
                     });
 
-                    function updateTotal() {
+                    function calculate() {
                         //console.log($('.itemtotal'));
                         var grandtotal = 0;
                         $('.itemtotal').each(function() {
                             grandtotal += parseFloat($(this).text());
                         });
-                        $('#grandtotal').text(grandtotal);
+                        $('#total').text(grandtotal);
                     }
                     //payment method
-                    $("#payment_method").change(function() {
-                        var payment_method = $(this).val();
-                        if (payment_method == 'cash') {
-                            $("#trxId").addClass('d-none');
-                        } else {
-                            $("#trxId").removeClass('d-none');
-                        }
-                    });
+                    // $("#payment_method").change(function() {
+                    //     var payment_method = $(this).val();
+                    //     if (payment_method == 'cash') {
+                    //         $("#trxId").addClass('d-none');
+                    //     } else {
+                    //         $("#trxId").removeClass('d-none');
+                    //     }
+                    // });
 
                     //place order
-                    $(document).on('click', '#orderBtn', function() {
-                        //check if payment method is cash
-                        var payment_method = $("#payment_method").val();
-                        if (payment_method == 'cash') {
-                            var trxId = '';
-                        } else {
-                            var trxId = $("#trxId").val();
-                            if(trxId == ''){
-                                alert('Please enter transaction ID');
-                                return;
-                            }
-                        }
-                        var order = [];
-                        $('.pid').each(function() {
-                            var pid = $(this).text();
-                            var qty = $(this).closest('tr').find('.qu').val();
-                            order.push({
-                                pid: pid,
-                                qty: qty
-                            });
-                        });
-                        //console.log(order);
-                        $.ajax({
-                            url: 'place_order.php',
-                            type: 'post',
-                            data: {
-                                orders: order,
-                                grandtotal: $('#grandtotal').text(),
-                                comment: $('#comment').val(),
-                                payment_method: payment_method,
-                                trxId: trxId
-                            },
-                            success: function(response) {
-                                console.log(response);
-                                $('#response').html(response);
-                                $('#dyn_tr').empty();
-                                $('#grandtotal').text(0);
-                                $('#comment').val('');
-                                $('#payment_method').val('cash');
-                                $('#trxId').val('');
-                                $('#trxId').addClass('d-none');
-                                alert('Order placed successfully');
-                            }
-                        });
-                    });
+                    // $(document).on('click', '#orderBtn', function() {
+                    //     //check if payment method is cash
+                    //     var payment_method = $("#payment_method").val();
+                    //     if (payment_method == 'cash') {
+                    //         var trxId = '';
+                    //     } else {
+                    //         var trxId = $("#trxId").val();
+                    //         if(trxId == ''){
+                    //             alert('Please enter transaction ID');
+                    //             return;
+                    //         }
+                    //     }
+                    //     var order = [];
+                    //     $('.pid').each(function() {
+                    //         var pid = $(this).text();
+                    //         var qty = $(this).closest('tr').find('.qu').val();
+                    //         order.push({
+                    //             pid: pid,
+                    //             qty: qty
+                    //         });
+                    //     });
+                    //     //console.log(order);
+                    //     $.ajax({
+                    //         url: 'place_order.php',
+                    //         type: 'post',
+                    //         data: {
+                    //             orders: order,
+                    //             grandtotal: $('#grandtotal').text(),
+                    //             comment: $('#comment').val(),
+                    //             payment_method: payment_method,
+                    //             trxId: trxId
+                    //         },
+                    //         success: function(response) {
+                    //             console.log(response);
+                    //             $('#response').html(response);
+                    //             $('#dyn_tr').empty();
+                    //             $('#grandtotal').text(0);
+                    //             $('#comment').val('');
+                    //             $('#payment_method').val('cash');
+                    //             $('#trxId').val('');
+                    //             $('#trxId').addClass('d-none');
+                    //             alert('Order placed successfully');
+                    //         }
+                    //     });
+                    // });
                 });
             </script>

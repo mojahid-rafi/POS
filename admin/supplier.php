@@ -1,18 +1,17 @@
-<?php include ("./header.php"); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if(!isset($_SESSION['user_name']))
+{
+    header("location:login.php");
+}
+?>
+
+<?php //include ("./header.php"); ?>
 <?php require ("./src/database.php"); ?>
 
-
-    <div class="content-wrapper">
-        <!-- START PAGE CONTENT-->
-        <div class="page-heading">
-            <h1 class="page-title">Supplier</h1>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="dashboard.php"><i class="la la-home font-20"></i></a>
-                </li>
-               <!-- <li class="breadcrumb-item"></li>-->
-            </ol>
-        </div>
 
         <!--    Enter Your Content Here-->
         <div class="page-content fade-in-up">
@@ -151,7 +150,7 @@
             </div>
  
     
-<?php include ("./footer.php"); ?>
+<?php //include ("./footer.php"); ?>
 
             <!-- PAGE LEVEL SCRIPTS-->
             <script type="text/javascript">

@@ -11,8 +11,6 @@
 
 <?php include ("./header.php"); ?>
 
-    <div class="content-wrapper">
-
     <!-- START PAGE CONTENT-->
     <div class="page-content fade-in-up">
         <div class="row">

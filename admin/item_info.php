@@ -3,32 +3,9 @@
 
     <div class="content-wrapper">
     <!-- START PAGE CONTENT-->
-    <div class="page-heading">
-<!--        <h1 class="page-title">Item Info</h1>-->
-<!--        <ol class="breadcrumb">-->
-<!--            <li class="breadcrumb-item">-->
-<!--                <a href="dashboard.php"><i class="la la-home font-20"></i></a>-->
-<!--            </li>-->
-<!--             <li class="breadcrumb-item"></li>-->
-<!--        </ol>-->
-    </div>
 
-    <!--    Enter Your Content Here-->
-<?php
-if (isset($_POST['submit'])){
-    $item_code = $_POST['icode'];
-    $item_name = $_POST['iname'];
-    $cat_id = $_POST['cat_id'];
-    $brand_id = $_POST['brand_id'];
-    $unit = $_POST['unit'];
-    $uprice = $_POST['uprice'];
-    $reolevel = $_POST['reolevel'];
-    $lpprice = $_POST['lpprice'];
-    $barcode = $_POST['barcode'];
-    $sts = $_POST['sts'];
-    $stmaintain = $_POST['stmaintain'];
-    $opstock = $_POST['opstock'];
 
+<<<<<<< HEAD
     $insert = "INSERT INTO `item_info`(`item_code`, `item_name`, `category_id`, `brand_id`, `unit`, `unit_price`, `rol`, `last_pur_price`, `barcode`, `sts`, `stock_mantain`, `op_stock`,`user_id`) VALUES ('{$item_code}', '{$item_name}', '{$cat_id}', '{$brand_id}', '{$unit}', '{$uprice}', '{$reolevel}', '{$lpprice}', '{$barcode}', '{$sts}', '{$stmaintain}', '{$opstock}','0')";
     $con->query($insert);
 
@@ -216,6 +193,8 @@ WHERE i.category_id = c.id and i.brand_id = b.id;';
         </div>
     </div>
   </div>
+=======
+>>>>>>> d49dbc203d7fba6941f0c4fcbc8793d06bdc311e
 
 <?php include ("./footer.php"); ?>
 

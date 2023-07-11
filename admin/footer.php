@@ -168,6 +168,50 @@
 <script src="./assets/js/app.min.js" type="text/javascript"></script>
 <!-- PAGE LEVEL SCRIPTS-->
 <script src="./assets/js/scripts/dashboard_1_demo.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".item").click(function(){
+            let pagename =  $(this).text().toLowerCase();
+            $.post("test-page/item.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".category").click(function(){
+            $.post("categories.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".brand").click(function(){
+            $.post("brand.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".customer").click(function(){
+            $.post("customer.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".supplier").click(function(){
+            $.post("supplier.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".sale").click(function(){
+            $.post("add_sale.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".user").click(function(){
+            $.post("users.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+
+    });
+</script>
+
+
 </body>
 
 </html>

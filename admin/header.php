@@ -95,7 +95,10 @@
             </div>
             <ul class="side-menu metismenu">
                 <li>
-                    <a class="" href="./dashboard.php"><i class="sidebar-item-icon fa fa-th-large"></i>
+<!--                    <a class="" href="./dashboard.php"><i class="sidebar-item-icon fa fa-th-large"></i>-->
+<!--                        <span class="nav-label">Dashboard</span>-->
+<!--                    </a>-->
+                    <a href="./dashboard.php"><i class="sidebar-item-icon fa fa-th-large"></i>
                         <span class="nav-label">Dashboard</span>
                     </a>
                 </li>
@@ -107,26 +110,29 @@
                     </a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./item_info.php">Add Product</a>
+                            <a href="javascript:void(0)" class="item">Add Product</a>
                         </li>
                         <li>
-                            <a href="./categories.php">Categories</a>
+                            <a href="javascript:void(0)" class="category">Categories</a>
                         </li>
                         <li>
-                            <a href="./brand.php">Brands</a>
+                            <a href="javascript:void(0)" class="brand">Brands</a>
                         </li>
 
                     </ul>
                 </li>
+
                 <li>
                     <a href="javascript:;"><i class="sidebar-item-icon fa fa-user-circle"></i>
                         <span class="nav-label">Party</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./customer.php">Customers</a>
+<!--                            <a href="./customer.php">Customers</a>-->
+                            <a href="javascript:void(0)" class="customer">Customers</a>
                         </li>
                         <li>
-                            <a href="supplier.php">Suppliers</a>
+<!--                            <a href="./supplier.php">Suppliers</a>-->
+                            <a href="javascript:void(0)" class="supplier">Suppliers</a>
                         </li>
 
                     </ul>
@@ -136,7 +142,8 @@
                         <span class="nav-label">Purchase</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="add_sale.php">Purchase Entry</a>
+<!--                            <a href="add_sale.php">Purchase Entry</a>-->
+                            <a href="javascript:void(0)" class="sale">Purchase Entry</a>
                         </li>
                         <li>
                             <a href="./pos/pos.php">Purchase List</a>
@@ -149,7 +156,8 @@
                         <span class="nav-label">Sale</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="add_sale.php">Sales Entry</a>
+<!--                            <a href="add_sale.php">Sales Entry</a>-->
+                            <a href="javascript:void(0)" class="sale">Sales Entry</a>
                         </li>
                         <li>
                             <a href="./pos/pos.php">POS</a>
@@ -162,7 +170,7 @@
                         <span class="nav-label">User Management</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./users.php">Users</a>
+                            <a href="javascript:void(0)" class="user">Users</a>
                         </li>
                         <li>
                             <a href="./roles.php">Roles</a>
@@ -211,3 +219,5 @@
         </div>
     </nav>
     <!-- END SIDEBAR-->
+
+    <div class="content-wrapper">

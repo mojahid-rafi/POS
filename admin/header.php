@@ -107,7 +107,7 @@
                     </a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="./item_info.php">Add Product</a>
+                            <a href="javascript:void(0)" class="item">Add Product</a>
                         </li>
                         <li>
                             <a href="./categories.php">Categories</a>
@@ -118,6 +118,7 @@
 
                     </ul>
                 </li>
+
                 <li>
                     <a href="javascript:;"><i class="sidebar-item-icon fa fa-user-circle"></i>
                         <span class="nav-label">Party</span><i class="fa fa-angle-left arrow"></i></a>
@@ -126,7 +127,7 @@
                             <a href="./customer.php">Customers</a>
                         </li>
                         <li>
-                            <a href="supplier.php">Suppliers</a>
+                            <a href="./supplier.php">Suppliers</a>
                         </li>
 
                     </ul>

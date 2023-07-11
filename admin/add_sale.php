@@ -140,8 +140,8 @@ if(!isset($_SESSION['user_name']))
                             <div class="row">
                                 <div class="col-12">
                                     <dl class="row">
-                                        <dt class="col-sm-6">Total Amount</dt>
-                                        <dd class="col-sm-6 text-right" id="total">00.00</dd>
+                                        <dt class="col-sm-6"><h5 class="m-b-20 m-t-10">Total Amount</h5></dt>
+                                        <dd class="col-sm-6 text-right text-bold"><h5 class="text-secondary m-b-20 m-t-10" id="total">00.00</h5></dd>
 
                                         <dt class="col-sm-6">Discount</dt>
                                         <dd class="col-sm-6 text-right" id="discount">00.00</dd>

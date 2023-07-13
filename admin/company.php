@@ -1,16 +1,6 @@
-<?php include("./header.php"); ?>
+<?php //include("./header.php"); ?>
 <?php require("./src/database.php"); ?>
 
-<div class="content-wrapper">
-    <!-- START PAGE CONTENT-->
-    <div class="page-heading">
-        <!-- <h1 class="page-title">Company Information</h1>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="dashboard.php"><i class="la la-home font-20"></i></a>
-            </li>
-        </ol> -->
-    </div>
     <!--    Enter Your Content Here-->
     <?php
     if (isset($_POST['submit'])) {
@@ -54,16 +44,22 @@
                         </div>
                         <div class="ibox-body">
                             <div class="row">
-                                <div class="col-sm-6 form-group">
+                                <div class="col-sm-12 form-group">
                                     <label>Company Name : </label>
                                     <input name="comname" class="form-control" type="text"
                                         value="<?php echo $row['comname']; ?>" placeholder="Name" required>
                                 </div>
-
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-6 form-group">
-                                    <label>Company Address : </label>
-                                    <textarea name="address" id="" cols="2" rows="1" class="form-control"
-                                        placeholder="Full Address"><?php echo $row['address']; ?></textarea>
+                                    <label>Report Header :</label>
+                                    <input name="rheader" class="form-control" type="text" placeholder="Report Header"
+                                           value="<?php echo $row['rheader']; ?>">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label>Company Website : </label>
+                                    <input name="comweb" class="form-control" type="text" placeholder="Company Website"
+                                           value="<?php echo $row['comweb']; ?>">
                                 </div>
                             </div>
                             <div class="row">
@@ -72,32 +68,25 @@
                                     <input name="phone" class="form-control" type="text" placeholder="Phone"
                                         value="<?php echo $row['phone']; ?>">
                                 </div>
-
                                 <div class="col-sm-6 form-group">
                                     <label>Email :</label>
                                     <input name="email" class="form-control" type="email" placeholder="Email Address"
-                                        value="<?php echo $row['email']; ?>">
+                                           value="<?php echo $row['email']; ?>">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 form-group">
-                                    <label>Report Header :</label>
-                                    <input name="rheader" class="form-control" type="text" placeholder="Report Header"
-                                        value="<?php echo $row['rheader']; ?>">
+                                <div class="col-sm-12 form-group">
+                                    <label>Company Address : </label>
+                                    <textarea name="address" id="" cols="2" rows="1" class="form-control"
+                                              placeholder="Full Address"><?php echo $row['address']; ?></textarea>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 form-group">
+                                <div class="col-sm-12 form-group">
                                     <label>Return Policy :</label>
                                     <textarea name="rpolicy" id="rpolicy" cols="2" rows="3" class="form-control"
                                         placeholder="Return Police"><?php echo $row['rpolicy']; ?></textarea>
                                 </div>
-                                <div class="col-sm-6 form-group">
-                                    <label>Company Website : </label>
-                                    <input name="comweb" class="form-control" type="text" placeholder="Company Website"
-                                        value="<?php echo $row['comweb']; ?>">
-                                </div>
-
                             </div>
                             <input type="submit" value="Update" name="submit" class="btn btn-success mt-2">
                         </div>
@@ -128,4 +117,4 @@
         </form>
     </div>
 
-    <?php include("./footer.php"); ?>
+<!--    --><?php //include("./footer.php"); ?>

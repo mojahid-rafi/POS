@@ -207,6 +207,16 @@
                 $(".content-wrapper").html(d);
             })
         })
+        $(".role").click(function(){
+            $.post("roles.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
+        $(".company").click(function(){
+            $.post("company.php",{},function(d){
+                $(".content-wrapper").html(d);
+            })
+        })
 
     });
 </script>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Dashboard - Point of Sale</title>
+    <title>Dashboard - Sales, Inventory and Account Management System</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/vendors/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css" />
@@ -30,10 +30,7 @@
     <header class="header">
         <div class="page-brand">
             <a class="link" href="./dashboard.php">
-                    <span class="brand">JogBiog
-<!--                        <span class="brand-tip">Management</span>-->
-                    </span>
-                <span class="brand-mini">POS</span>
+                <span class="brand">POS Solutions</span>
             </a>
         </div>
         <div class="flexbox flex-1">
@@ -110,13 +107,16 @@
                     </a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="javascript:void(0)" class="item">Add Product</a>
+                            <a href="./item_info.php" class="item">Add Product</a>
+<!--                            <a href="javascript:void(0)" class="item">Add Product</a>-->
                         </li>
                         <li>
-                            <a href="javascript:void(0)" class="category">Categories</a>
+                            <a href="./categories.php" class="category">Categories</a>
+<!--                            <a href="javascript:void(0)" class="category">Categories</a>-->
                         </li>
                         <li>
-                            <a href="javascript:void(0)" class="brand">Brands</a>
+                            <a href="./brand.php" class="brand">Brands</a>
+<!--                            <a href="javascript:void(0)" class="brand">Brands</a>-->
                         </li>
 
                     </ul>
@@ -127,12 +127,12 @@
                         <span class="nav-label">Party</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-<!--                            <a href="./customer.php">Customers</a>-->
-                            <a href="javascript:void(0)" class="customer">Customers</a>
+                            <a href="./customer.php">Customers</a>
+<!--                            <a href="javascript:void(0)" class="customer">Customers</a>-->
                         </li>
                         <li>
-<!--                            <a href="./supplier.php">Suppliers</a>-->
-                            <a href="javascript:void(0)" class="supplier">Suppliers</a>
+                            <a href="./supplier.php">Suppliers</a>
+<!--                            <a href="javascript:void(0)" class="supplier">Suppliers</a>-->
                         </li>
 
                     </ul>
@@ -142,8 +142,8 @@
                         <span class="nav-label">Purchase</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-<!--                            <a href="add_sale.php">Purchase Entry</a>-->
-                            <a href="javascript:void(0)" class="sale">Purchase Entry</a>
+                            <a href="add_sale.php">Purchase Entry</a>
+<!--                            <a href="javascript:void(0)" class="sale">Purchase Entry</a>-->
                         </li>
                         <li>
                             <a href="./pos/pos.php">Purchase List</a>
@@ -156,8 +156,8 @@
                         <span class="nav-label">Sale</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-<!--                            <a href="add_sale.php">Sales Entry</a>-->
-                            <a href="javascript:void(0)" class="sale">Sales Entry</a>
+                            <a href="add_sale.php">Sales Entry</a>
+<!--                            <a href="javascript:void(0)" class="sale">Sales Entry</a>-->
                         </li>
                         <li>
                             <a href="./pos/pos.php">POS</a>
@@ -170,10 +170,12 @@
                         <span class="nav-label">User Management</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="javascript:void(0)" class="user">Users</a>
+                            <a href="./users.php" class="user">Users</a>
+<!--                            <a href="javascript:void(0)" class="user">Users</a>-->
                         </li>
                         <li>
                             <a href="./roles.php">Roles</a>
+<!--                            <a href="javascript:void(0)" class="role">Roles</a>-->
                         </li>
 
                     </ul>
@@ -184,6 +186,7 @@
                     <ul class="nav-2-level collapse">
                         <li>
                             <a href="./company.php">Company Information</a>
+<!--                            <a href="javascript:void(0)" class="company">Company Information</a>-->
                         </li>
                         <li>
                             <a href="./Supplier_form.php">Localization</a>

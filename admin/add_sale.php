@@ -9,7 +9,7 @@ if(!isset($_SESSION['user_name']))
 }
 ?>
 
-<?php //include ("./header.php"); ?>
+<?php include ("./header.php"); ?>
 <?php require ("./src/database.php"); ?>
 
         <!--    Enter Your Content Here-->
@@ -150,7 +150,7 @@ if(!isset($_SESSION['user_name']))
                 </div>
             </div>
     
-<?php //include ("./footer.php"); ?>
+<?php include ("./footer.php"); ?>
 
 
             <script type="text/javascript">

@@ -204,15 +204,7 @@ if (isset($_POST['submit'])){
                 </div>
             </div>
         </div>
-    </div>
-
-
-<<<<<<< HEAD
-    $insert = "INSERT INTO `item_info`(`item_code`, `item_name`, `category_id`, `brand_id`, `unit`, `unit_price`, `rol`, `last_pur_price`, `barcode`, `sts`, `stock_mantain`, `op_stock`,`user_id`) VALUES ('{$item_code}', '{$item_name}', '{$cat_id}', '{$brand_id}', '{$unit}', '{$uprice}', '{$reolevel}', '{$lpprice}', '{$barcode}', '{$sts}', '{$stmaintain}', '{$opstock}','0')";
-    $con->query($insert);
-
-};
-?>
+    </div
 
     <div class="page-content fade-in-up">
     <div class="row">
@@ -395,8 +387,6 @@ WHERE i.category_id = c.id and i.brand_id = b.id;';
         </div>
     </div>
   </div>
-=======
->>>>>>> d49dbc203d7fba6941f0c4fcbc8793d06bdc311e
 
 <?php include ("./footer.php"); ?>
 

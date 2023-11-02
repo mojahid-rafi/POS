@@ -1,4 +1,4 @@
-<?php //include("./header.php"); ?>
+<?php include("./header.php"); ?>
 <?php require("./src/database.php"); ?>
 
     <!--    Enter Your Content Here-->
@@ -117,4 +117,4 @@
         </form>
     </div>
 
-<!--    --><?php //include("./footer.php"); ?>
+<?php include("./footer.php"); ?>

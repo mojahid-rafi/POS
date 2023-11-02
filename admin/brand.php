@@ -112,3 +112,14 @@
         </div>
     
 <?php include ("./footer.php"); ?>
+
+
+    <script>
+        $.ajax({
+            url: 'src/ajax/getDataForDatatable.php',
+            type: 'post',
+            success: function() {
+                $("#datatable").DataTable().ajax.reload();
+            }
+        });
+    </script>

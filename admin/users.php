@@ -1,4 +1,4 @@
-<?php //include ("./header.php"); ?>
+<?php include ("./header.php"); ?>
 <?php require ("./src/database.php"); ?>
 
         <?php
@@ -152,4 +152,4 @@
             </div>
         </div>
     
-<?php //include ("./footer.php"); ?>
+<?php include ("./footer.php"); ?>
